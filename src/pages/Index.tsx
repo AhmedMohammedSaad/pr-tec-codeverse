@@ -11,7 +11,6 @@ import WhatsAppFloat from "@/components/WhatsAppFloat";
 
 const Index = () => {
   useEffect(() => {
-    // Intersection Observer for scroll animations
     const observer = new IntersectionObserver(
       (entries) => {
         entries.forEach((entry) => {
@@ -26,7 +25,6 @@ const Index = () => {
       }
     );
 
-    // Observe all elements with section-reveal class
     const revealElements = document.querySelectorAll(".section-reveal");
     revealElements.forEach((el) => observer.observe(el));
 
@@ -34,7 +32,7 @@ const Index = () => {
   }, []);
 
   return (
-    <div className="min-h-screen bg-background">
+    <div className="min-h-screen bg-background text-right" dir="rtl">
       <Navigation />
       <Hero />
       <About />

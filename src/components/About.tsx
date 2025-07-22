@@ -6,87 +6,81 @@ const About = () => {
   const features = [
     {
       icon: Award,
-      title: "Expert Instructors",
-      description: "Learn from industry professionals with 10+ years of experience"
+      title: "مدربون خبراء",
+      description: "تعلّم على يد محترفين بخبرة أكثر من 10 سنوات"
     },
     {
       icon: Users,
-      title: "Small Class Sizes",
-      description: "Personalized attention with maximum 15 students per batch"
+      title: "مجموعات صغيرة",
+      description: "اهتمام شخصي لكل طالب بحد أقصى 15 طالب في الدفعة"
     },
     {
       icon: BookOpen,
-      title: "Hands-on Projects",
-      description: "Build real-world applications and portfolio-worthy projects"
+      title: "مشاريع عملية",
+      description: "بناء تطبيقات حقيقية ومشاريع تضاف لسيرتك الذاتية"
     },
     {
       icon: Clock,
-      title: "Flexible Schedule",
-      description: "Weekend and evening batches to fit your busy lifestyle"
+      title: "مواعيد مرنة",
+      description: "مجموعات مسائية وعطلة نهاية الأسبوع لتناسب وقتك"
     },
     {
       icon: Zap,
-      title: "Latest Technology",
-      description: "Stay ahead with cutting-edge tools and frameworks"
+      title: "أحدث التقنيات",
+      description: "تعلم باستخدام أحدث الأدوات والتقنيات في السوق"
     },
     {
       icon: CheckCircle,
-      title: "Job Assistance",
-      description: "Career guidance and placement support for all graduates"
+      title: "دعم وظيفي",
+      description: "إرشاد مهني ودعم في التوظيف لكل الخريجين"
     }
   ];
 
   const achievements = [
-    { number: "500+", label: "Students Graduated" },
-    { number: "95%", label: "Placement Rate" },
-    { number: "50+", label: "Industry Partners" },
-    { number: "4.9/5", label: "Student Rating" }
+    { number: "500+", label: "طالب تخرجوا" },
+    { number: "95%", label: "نسبة التوظيف" },
+    { number: "50+", label: "شريك صناعي" },
+    { number: "4.9/5", label: "تقييم الطلاب" }
   ];
 
   return (
     <section id="about" className="py-20 bg-gradient-to-br from-muted/10 to-background">
       <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
-        {/* Section Header */}
+        {/* العنوان */}
         <div className="text-center mb-16 section-reveal">
           <h2 className="text-4xl md:text-5xl font-bold mb-6">
-            About <span className="bg-gradient-to-r from-primary to-accent bg-clip-text text-transparent">PR TEC Academy</span>
+            عن <span className="bg-gradient-to-r from-primary to-accent bg-clip-text text-transparent">PR TEC Academy</span>
           </h2>
           <p className="text-xl text-muted-foreground max-w-3xl mx-auto">
-            We're a premier programming academy dedicated to transforming beginners into confident developers 
-            through practical, project-based learning and industry-relevant curriculum.
+            نحن أكاديمية برمجة رائدة تهدف لتحويل المبتدئين إلى مطورين واثقين من أنفسهم من خلال تعليم عملي قائم على المشاريع ومحتوى مواكب للصناعة.
           </p>
         </div>
 
-        {/* Main Content Grid */}
+        {/* محتوى رئيسي */}
         <div className="grid lg:grid-cols-2 gap-12 items-center mb-20">
-          {/* Left Content */}
+          {/* اليسار */}
           <div className="section-reveal">
-            <h3 className="text-3xl font-bold mb-6">Empowering the Next Generation of Developers</h3>
+            <h3 className="text-3xl font-bold mb-6">نؤهل الجيل القادم من المبرمجين</h3>
             <div className="space-y-4 text-muted-foreground">
               <p>
-                Founded in 2020, PR TEC Academy has been at the forefront of programming education, 
-                offering comprehensive courses that bridge the gap between academic theory and industry practice.
+                تأسست أكاديمية PR TEC في عام 2023، وسرعان ما أصبحت في طليعة تعليم البرمجة من خلال تقديم دورات متكاملة تربط بين الجانب الأكاديمي ومتطلبات سوق العمل.
               </p>
               <p>
-                Our mission is simple: to make quality programming education accessible to everyone, 
-                regardless of their background or prior experience. We believe that with the right guidance 
-                and hands-on practice, anyone can become a skilled developer.
+                مهمتنا بسيطة: توفير تعليم برمجة عالي الجودة للجميع بغض النظر عن الخلفية أو الخبرة السابقة. نؤمن أن أي شخص يمكنه أن يصبح مبرمجًا مميزًا بالتوجيه الصحيح والتدريب العملي.
               </p>
               <p>
-                From children taking their first steps into coding to professionals looking to upskill, 
-                we provide a supportive learning environment that fosters creativity, problem-solving, 
-                and technical excellence.
+                من الأطفال الذين يخطون أولى خطواتهم في البرمجة إلى المحترفين الذين يسعون لتطوير مهاراتهم، نوفر بيئة تعليمية داعمة تشجع على الإبداع، وحل المشكلات، والتميز التقني.
               </p>
             </div>
-            
+
             <div className="mt-8">
               <Button className="btn-glow">
-                Learn More About Our Story
+                اعرف المزيد عن رحلتنا
               </Button>
             </div>
           </div>
 
-          {/* Right Content - Achievements */}
+          {/* الإنجازات */}
           <div className="section-reveal">
             <div className="grid grid-cols-2 gap-6">
               {achievements.map((achievement, index) => (
@@ -105,12 +99,12 @@ const About = () => {
           </div>
         </div>
 
-        {/* Why Choose Us Section */}
+        {/* لماذا نحن */}
         <div className="section-reveal">
           <h3 className="text-3xl font-bold text-center mb-12">
-            Why Choose <span className="text-primary">PR TEC Academy?</span>
+            لماذا تختار <span className="text-primary">PR TEC Academy؟</span>
           </h3>
-          
+
           <div className="grid md:grid-cols-2 lg:grid-cols-3 gap-8">
             {features.map((feature, index) => (
               <Card key={index} className="course-card group">
@@ -128,20 +122,19 @@ const About = () => {
           </div>
         </div>
 
-        {/* Call to Action */}
+        {/* دعوة للتسجيل */}
         <div className="text-center mt-16 section-reveal">
           <div className="bg-gradient-to-r from-primary/10 to-accent/10 rounded-2xl p-8 border border-primary/20">
-            <h3 className="text-2xl font-bold mb-4">Ready to Start Your Coding Journey?</h3>
+            <h3 className="text-2xl font-bold mb-4">جاهز تبدأ رحلتك في عالم البرمجة؟</h3>
             <p className="text-muted-foreground mb-6 max-w-2xl mx-auto">
-              Join thousands of students who have transformed their careers with PR TEC Academy. 
-              Take the first step towards becoming a professional developer today.
+              انضم لآلاف الطلاب اللي غيروا حياتهم مع PR TEC Academy. ابدأ أول خطوة نحو مستقبل مهني احترافي.
             </p>
             <div className="flex flex-col sm:flex-row gap-4 justify-center">
               <Button className="btn-glow">
-                Explore Courses
+                استعرض الدورات
               </Button>
               <Button variant="outline" className="border-primary/50 hover:border-primary hover:bg-primary/10">
-                Schedule a Demo
+                احجز تجربة مجانية
               </Button>
             </div>
           </div>
