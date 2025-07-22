@@ -279,7 +279,15 @@ const Contact = () => {
                     placeholder="Enter your email" 
                     className="bg-background border-border focus:border-primary"
                   />
-                  <Button className="btn-glow whitespace-nowrap">
+                  <Button 
+                    className="btn-glow whitespace-nowrap"
+                    onClick={() => {
+                      toast({
+                        title: "Subscribed! 📧",
+                        description: "You've been added to our newsletter list.",
+                      });
+                    }}
+                  >
                     Subscribe
                   </Button>
                 </div>
@@ -299,7 +307,11 @@ const Contact = () => {
                   <p className="text-muted-foreground">
                     Located in the heart of the tech district with easy access to public transport
                   </p>
-                  <Button variant="outline" className="mt-4 border-primary/50 hover:border-primary hover:bg-primary/10">
+                  <Button 
+                    variant="outline" 
+                    className="mt-4 border-primary/50 hover:border-primary hover:bg-primary/10"
+                    onClick={() => window.open('https://maps.google.com/?q=PR+TEC+Academy', '_blank')}
+                  >
                     View on Google Maps
                   </Button>
                 </div>

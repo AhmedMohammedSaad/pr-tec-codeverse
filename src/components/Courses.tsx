@@ -139,7 +139,10 @@ const Courses = () => {
                     <span className="text-sm text-muted-foreground">one-time</span>
                   </div>
                   
-                  <Button className="w-full btn-glow">
+                  <Button 
+                    className="w-full btn-glow"
+                    onClick={() => document.getElementById('contact')?.scrollIntoView({ behavior: 'smooth' })}
+                  >
                     Enroll Now
                   </Button>
                 </div>
@@ -155,7 +158,12 @@ const Courses = () => {
             <p className="text-muted-foreground mb-6">
               Book a free consultation with our education counselors to find your perfect learning path.
             </p>
-            <Button variant="outline" size="lg" className="border-primary/50 hover:border-primary hover:bg-primary/10">
+            <Button 
+              variant="outline" 
+              size="lg" 
+              className="border-primary/50 hover:border-primary hover:bg-primary/10"
+              onClick={() => document.getElementById('contact')?.scrollIntoView({ behavior: 'smooth' })}
+            >
               Schedule Free Consultation
             </Button>
           </div>

@@ -63,7 +63,11 @@ const Hero = () => {
 
         {/* CTA Buttons */}
         <div className="hero-buttons flex flex-col sm:flex-row gap-4 justify-center items-center">
-          <Button size="lg" className="btn-glow group text-lg px-8 py-6">
+          <Button 
+            size="lg" 
+            className="btn-glow group text-lg px-8 py-6"
+            onClick={() => document.getElementById('courses')?.scrollIntoView({ behavior: 'smooth' })}
+          >
             Start Learning Today
             <ArrowRight className="ml-2 h-5 w-5 transition-transform group-hover:translate-x-1" />
           </Button>
@@ -72,6 +76,7 @@ const Hero = () => {
             variant="outline" 
             size="lg" 
             className="text-lg px-8 py-6 border-primary/50 hover:border-primary hover:bg-primary/10 group"
+            onClick={() => window.open('https://youtube.com/watch?v=dQw4w9WgXcQ', '_blank')}
           >
             <Play className="mr-2 h-5 w-5 transition-transform group-hover:scale-110" />
             Watch Demo
