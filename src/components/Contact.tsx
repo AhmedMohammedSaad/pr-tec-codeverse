@@ -6,7 +6,6 @@ import { Textarea } from "@/components/ui/textarea";
 import { Badge } from "@/components/ui/badge";
 import { MapPin, Phone, Mail, Clock, Send, MessageCircle, Calendar, Users } from "lucide-react";
 import { useToast } from "@/hooks/use-toast";
-
 const Contact = () => {
   const [formData, setFormData] = useState({
     name: "",
@@ -16,20 +15,19 @@ const Contact = () => {
     message: ""
   });
   const [isSubmitting, setIsSubmitting] = useState(false);
-  const { toast } = useToast();
-
+  const {
+    toast
+  } = useToast();
   const handleSubmit = async (e: React.FormEvent) => {
     e.preventDefault();
     setIsSubmitting(true);
 
     // Simulate form submission
     await new Promise(resolve => setTimeout(resolve, 1500));
-
     toast({
       title: "Message Sent Successfully! 🎉",
-      description: "We'll get back to you within 24 hours. Thank you for your interest!",
+      description: "We'll get back to you within 24 hours. Thank you for your interest!"
     });
-
     setFormData({
       name: "",
       email: "",
@@ -37,67 +35,52 @@ const Contact = () => {
       course: "",
       message: ""
     });
-
     setIsSubmitting(false);
   };
-
   const handleChange = (e: React.ChangeEvent<HTMLInputElement | HTMLTextAreaElement | HTMLSelectElement>) => {
     setFormData(prev => ({
       ...prev,
       [e.target.name]: e.target.value
     }));
   };
-
-  const contactInfo = [
-    {
-      icon: MapPin,
-      title: "Visit Our Campus",
-      details: ["123 Tech Street", "Innovation District", "Techville, TC 12345"],
-      action: "Get Directions"
-    },
-    {
-      icon: Phone,
-      title: "Call Us",
-      details: ["+1 (555) 123-TECH", "+1 (555) 123-8324"],
-      action: "Call Now"
-    },
-    {
-      icon: Mail,
-      title: "Email Us",
-      details: ["info@prtecacademy.com", "admissions@prtecacademy.com"],
-      action: "Send Email"
-    },
-    {
-      icon: Clock,
-      title: "Office Hours",
-      details: ["Mon - Fri: 9:00 AM - 8:00 PM", "Sat - Sun: 10:00 AM - 6:00 PM"],
-      action: "Schedule Visit"
-    }
-  ];
-
-  const quickActions = [
-    {
-      icon: Calendar,
-      title: "Book a Demo Class",
-      description: "Experience our teaching style firsthand",
-      badge: "Free"
-    },
-    {
-      icon: MessageCircle,
-      title: "Chat with Counselor",
-      description: "Get personalized course recommendations",
-      badge: "Online"
-    },
-    {
-      icon: Users,
-      title: "Join Info Session",
-      description: "Weekly sessions every Saturday",
-      badge: "Group"
-    }
-  ];
-
-  return (
-    <section id="contact" className="py-20 bg-gradient-to-br from-muted/10 to-background">
+  const contactInfo = [{
+    icon: MapPin,
+    title: "Visit Our Campus",
+    details: ["123 Tech Street", "Innovation District", "Techville, TC 12345"],
+    action: "Get Directions"
+  }, {
+    icon: Phone,
+    title: "Call Us",
+    details: ["+1 (555) 123-TECH", "+1 (555) 123-8324"],
+    action: "Call Now"
+  }, {
+    icon: Mail,
+    title: "Email Us",
+    details: ["info@prtecacademy.com", "admissions@prtecacademy.com"],
+    action: "Send Email"
+  }, {
+    icon: Clock,
+    title: "Office Hours",
+    details: ["Mon - Fri: 9:00 AM - 8:00 PM", "Sat - Sun: 10:00 AM - 6:00 PM"],
+    action: "Schedule Visit"
+  }];
+  const quickActions = [{
+    icon: Calendar,
+    title: "Book a Demo Class",
+    description: "Experience our teaching style firsthand",
+    badge: "Free"
+  }, {
+    icon: MessageCircle,
+    title: "Chat with Counselor",
+    description: "Get personalized course recommendations",
+    badge: "Online"
+  }, {
+    icon: Users,
+    title: "Join Info Session",
+    description: "Weekly sessions every Saturday",
+    badge: "Group"
+  }];
+  return <section id="contact" className="py-20 bg-gradient-to-br from-muted/10 to-background">
       <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
         {/* Section Header */}
         <div className="text-center mb-16 section-reveal">
@@ -112,8 +95,7 @@ const Contact = () => {
 
         {/* Quick Actions */}
         <div className="grid md:grid-cols-3 gap-6 mb-16 section-reveal">
-          {quickActions.map((action, index) => (
-            <Card key={index} className="course-card group cursor-pointer">
+          {quickActions.map((action, index) => <Card key={index} className="course-card group cursor-pointer">
               <CardContent className="p-6 text-center">
                 <div className="flex justify-center items-center mb-4">
                   <action.icon className="h-12 w-12 text-primary group-hover:scale-110 transition-transform" />
@@ -128,8 +110,7 @@ const Contact = () => {
                   {action.description}
                 </p>
               </CardContent>
-            </Card>
-          ))}
+            </Card>)}
         </div>
 
         {/* Main Contact Section */}
@@ -147,46 +128,19 @@ const Contact = () => {
               <form onSubmit={handleSubmit} className="space-y-4">
                 <div className="grid md:grid-cols-2 gap-4">
                   <div>
-                    <Input
-                      name="name"
-                      placeholder="Your Name"
-                      value={formData.name}
-                      onChange={handleChange}
-                      required
-                      className="bg-background border-border focus:border-primary"
-                    />
+                    <Input name="name" placeholder="Your Name" value={formData.name} onChange={handleChange} required className="bg-background border-border focus:border-primary" />
                   </div>
                   <div>
-                    <Input
-                      name="email"
-                      type="email"
-                      placeholder="Your Email"
-                      value={formData.email}
-                      onChange={handleChange}
-                      required
-                      className="bg-background border-border focus:border-primary"
-                    />
+                    <Input name="email" type="email" placeholder="Your Email" value={formData.email} onChange={handleChange} required className="bg-background border-border focus:border-primary" />
                   </div>
                 </div>
                 
                 <div className="grid md:grid-cols-2 gap-4">
                   <div>
-                    <Input
-                      name="phone"
-                      type="tel"
-                      placeholder="Phone Number"
-                      value={formData.phone}
-                      onChange={handleChange}
-                      className="bg-background border-border focus:border-primary"
-                    />
+                    <Input name="phone" type="tel" placeholder="Phone Number" value={formData.phone} onChange={handleChange} className="bg-background border-border focus:border-primary" />
                   </div>
                   <div>
-                    <select
-                      name="course"
-                      value={formData.course}
-                      onChange={handleChange}
-                      className="w-full px-3 py-2 bg-background border border-border rounded-md focus:border-primary focus:outline-none focus:ring-1 focus:ring-primary"
-                    >
+                    <select name="course" value={formData.course} onChange={handleChange} className="w-full px-3 py-2 bg-background border border-border rounded-md focus:border-primary focus:outline-none focus:ring-1 focus:ring-primary">
                       <option value="">Select Course Interest</option>
                       <option value="flutter">Flutter Development</option>
                       <option value="frontend">Front-End Web Development</option>
@@ -199,32 +153,17 @@ const Contact = () => {
                 </div>
                 
                 <div>
-                  <Textarea
-                    name="message"
-                    placeholder="Tell us more about your goals and any questions you have..."
-                    value={formData.message}
-                    onChange={handleChange}
-                    rows={5}
-                    className="bg-background border-border focus:border-primary resize-none"
-                  />
+                  <Textarea name="message" placeholder="Tell us more about your goals and any questions you have..." value={formData.message} onChange={handleChange} rows={5} className="bg-background border-border focus:border-primary resize-none" />
                 </div>
                 
-                <Button 
-                  type="submit" 
-                  className="w-full btn-glow"
-                  disabled={isSubmitting}
-                >
-                  {isSubmitting ? (
-                    <>
+                <Button type="submit" className="w-full btn-glow" disabled={isSubmitting}>
+                  {isSubmitting ? <>
                       <div className="animate-spin rounded-full h-4 w-4 border-b-2 border-white mr-2"></div>
                       Sending...
-                    </>
-                  ) : (
-                    <>
+                    </> : <>
                       <Send className="mr-2 h-4 w-4" />
                       Send Message
-                    </>
-                  )}
+                    </>}
                 </Button>
               </form>
             </CardContent>
@@ -241,8 +180,7 @@ const Contact = () => {
             </div>
 
             <div className="space-y-4">
-              {contactInfo.map((info, index) => (
-                <Card key={index} className="course-card group">
+              {contactInfo.map((info, index) => <Card key={index} className="course-card group">
                   <CardContent className="p-6">
                     <div className="flex items-start gap-4">
                       <info.icon className="h-6 w-6 text-primary mt-1 group-hover:scale-110 transition-transform" />
@@ -251,11 +189,9 @@ const Contact = () => {
                           {info.title}
                         </h4>
                         <div className="space-y-1">
-                          {info.details.map((detail, idx) => (
-                            <p key={idx} className="text-muted-foreground text-sm">
+                          {info.details.map((detail, idx) => <p key={idx} className="text-muted-foreground text-sm">
                               {detail}
-                            </p>
-                          ))}
+                            </p>)}
                         </div>
                         <Button variant="link" className="p-0 h-auto mt-2 text-primary">
                           {info.action} →
@@ -263,8 +199,7 @@ const Contact = () => {
                       </div>
                     </div>
                   </CardContent>
-                </Card>
-              ))}
+                </Card>)}
             </div>
 
             {/* Newsletter Signup */}
@@ -275,19 +210,13 @@ const Contact = () => {
                   Subscribe to our newsletter for course updates, tech tips, and exclusive offers.
                 </p>
                 <div className="flex gap-2">
-                  <Input 
-                    placeholder="Enter your email" 
-                    className="bg-background border-border focus:border-primary"
-                  />
-                  <Button 
-                    className="btn-glow whitespace-nowrap"
-                    onClick={() => {
-                      toast({
-                        title: "Subscribed! 📧",
-                        description: "You've been added to our newsletter list.",
-                      });
-                    }}
-                  >
+                  <Input placeholder="Enter your email" className="bg-background border-border focus:border-primary" />
+                  <Button className="btn-glow whitespace-nowrap" onClick={() => {
+                  toast({
+                    title: "Subscribed! 📧",
+                    description: "You've been added to our newsletter list."
+                  });
+                }}>
                     Subscribe
                   </Button>
                 </div>
@@ -300,28 +229,11 @@ const Contact = () => {
         <div className="mt-16 section-reveal">
           <Card className="course-card overflow-hidden">
             <CardContent className="p-0">
-              <div className="h-64 bg-gradient-to-br from-primary/20 to-accent/20 flex items-center justify-center">
-                <div className="text-center">
-                  <MapPin className="h-12 w-12 text-primary mx-auto mb-4" />
-                  <h4 className="text-xl font-semibold mb-2">Find Our Campus</h4>
-                  <p className="text-muted-foreground">
-                    Located in the heart of the tech district with easy access to public transport
-                  </p>
-                  <Button 
-                    variant="outline" 
-                    className="mt-4 border-primary/50 hover:border-primary hover:bg-primary/10"
-                    onClick={() => window.open('https://maps.google.com/?q=PR+TEC+Academy', '_blank')}
-                  >
-                    View on Google Maps
-                  </Button>
-                </div>
-              </div>
+              
             </CardContent>
           </Card>
         </div>
       </div>
-    </section>
-  );
+    </section>;
 };
-
 export default Contact;
