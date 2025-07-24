@@ -15,20 +15,7 @@ const Contact = () => {
     course: "",
     message: ""
   });
-  const [isSubmitting, setIsSubmitting] = useState(false);
-  const { toast } = useToast();
-
-  const handleSubmit = async (e) => {
-    e.preventDefault();
-    setIsSubmitting(true);
-    await new Promise(resolve => setTimeout(resolve, 1500));
-    toast({
-      title: "تم إرسال الرسالة بنجاح! 🎉",
-      description: "سنتواصل معك خلال 24 ساعة. شكرًا لاهتمامك!"
-    });
-    setFormData({ name: "", email: "", phone: "", course: "", message: "" });
-    setIsSubmitting(false);
-  };
+   
 
   const handleChange = (e) => {
     setFormData(prev => ({
@@ -93,44 +80,6 @@ const Contact = () => {
             </Card>
           ))}
         </div>
-
-        <div className="grid lg:grid-cols-2 gap-12">
-          <Card className="course-card section-reveal">
-            <CardHeader>
-              <CardTitle className="text-2xl">أرسل لنا رسالة</CardTitle>
-              <CardDescription>
-                املأ النموذج وسنرد عليك بأسرع وقت ممكن.
-              </CardDescription>
-            </CardHeader>
-            <CardContent>
-              <form onSubmit={handleSubmit} className="space-y-4">
-                <div className="grid md:grid-cols-2 gap-4">
-                  <Input name="name" placeholder="الاسم الكامل" value={formData.name} onChange={handleChange} required className="bg-background border-border focus:border-primary" />
-                  <Input name="email" type="email" placeholder="البريد الإلكتروني" value={formData.email} onChange={handleChange} required className="bg-background border-border focus:border-primary" />
-                </div>
-
-                <div className="grid md:grid-cols-2 gap-4">
-                  <Input name="phone" type="tel" placeholder="رقم الهاتف" value={formData.phone} onChange={handleChange} className="bg-background border-border focus:border-primary" />
-                  <select name="course" value={formData.course} onChange={handleChange} className="w-full px-3 py-2 bg-background border border-border rounded-md focus:border-primary focus:outline-none focus:ring-1 focus:ring-primary">
-                    <option value="">اختر الدورة التدريبية</option>
-                    <option value="flutter">تطوير تطبيقات Flutter</option>
-                    <option value="frontend">تطوير الواجهة الأمامية</option>
-                    <option value="backend">تطوير الواجهة الخلفية</option>
-                    <option value="basics">أساسيات البرمجة</option>
-                    <option value="kids">برمجة للأطفال</option>
-                    <option value="consultation">استشارة عامة</option>
-                  </select>
-                </div>
-
-                <Textarea name="message" placeholder="حدثنا عن أهدافك أو استفساراتك..." value={formData.message} onChange={handleChange} rows={5} className="bg-background border-border focus:border-primary resize-none" />
-
-                <Button type="submit" className="w-full btn-glow" disabled={isSubmitting}>
-                  {isSubmitting ? (<><div className="animate-spin rounded-full h-4 w-4 border-b-2 border-white mr-2"></div>جاري الإرسال...</>) : (<><Send className="mr-2 h-4 w-4" /> أرسل الرسالة</>)}
-                </Button>
-              </form>
-            </CardContent>
-          </Card>
-
           <div className="space-y-6 section-reveal">
             <div>
               <h3 className="text-2xl font-bold mb-6">معلومات التواصل</h3>
@@ -161,7 +110,7 @@ const Contact = () => {
             </div>
           </div>
         </div>
-      </div>
+   
     </section>
   );
 };
