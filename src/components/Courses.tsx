@@ -26,14 +26,20 @@ const courses = [
     discountedPrice: 4500,
     color: "text-blue-400",
     features: [
-      "أساسيات لغة Dart",
-      "واجهة Flutter وWidgets",
-      "إدارة الحالة (Provider, Bloc)",
-      "تكامل Firebase (التوثيق، Firestore، التخزين)",
-      "إشعارات الدفع",
-      "نشر التطبيق (Play Store & App Store)"
+      "Dart fundamentals & Object-Oriented Programming",
+      "Flutter widgets, layouts, and responsive UI patterns",
+      "State management (Provider, Bloc, Riverpod) and Clean Architecture",
+      "REST API integration (Dio/HTTP), error handling, and caching",
+      "Firebase suite: Auth, Firestore, Storage, Cloud Functions, FCM",
+      "Supabase integration (auth, storage, realtime databases)",
+      "Payment gateways (Stripe, Paymob, etc.) and in-app purchases",
+      "Deploying to Play Store & App Store, versioning, and CI/CD basics",
+      "Using AI tools to speed up development and boost your project portfolio"
     ]
   },
+
+    
+  
   {
     image: "https://www.syncfusion.com/blogs/wp-content/uploads/2020/07/Top-6-Front-End-Web-Development-Tools-to-Increase-Your-Productivity-in-2020-1.jpg",
     title: "تطوير الويب الواجهة الأمامية",
@@ -46,12 +52,16 @@ const courses = [
     discountedPrice: 4000,
     color: "text-green-400",
     features: [
-      "HTML5 والتوصيف الدلالي",
-      "CSS3 وتنسيقات متجاوبة",
-      "JavaScript ES6+",
-      "التحكم في الـ DOM",
-      "React مع Hooks والتنقل",
-      "تكامل API باستخدام Axios/Fetch"
+"HTML5 semantic structure & accessibility basics",
+      "CSS3, responsive design, Flexbox/Grid, and Tailwind CSS",
+      "Modern JavaScript (ES6+), DOM manipulation, and async patterns",
+      "React fundamentals, Hooks, and React Router for SPA navigation",
+      "State management (Context API, Redux Toolkit) and global stores",
+      "API integration (Axios/Fetch), error handling, and data caching",
+      "Tooling & bundlers (Vite/Webpack) and environment variables",
+      "Testing with Jest & React Testing Library and deployment (Vercel/Netlify)",
+      "Using AI to accelerate UI development, prototyping, and debugging"
+
     ]
   },
   {
@@ -66,12 +76,16 @@ const courses = [
     discountedPrice: 5000,
     color: "text-purple-400",
     features: [
-      "مفاهيم Python الأساسية",
-      "إطار عمل Django",
-      "واجهات REST باستخدام Django REST Framework",
-      "PostgreSQL وORM",
-      "المصادقة والصلاحيات",
-      "نشر على السحابة باستخدام Docker وHeroku"
+        "Python syntax, OOP, virtual environments, and best practices",
+      "Django MVC pattern, templates, and ORM fundamentals",
+      "Django REST Framework (DRF) for building secure RESTful APIs",
+      "PostgreSQL integration, migrations, and advanced queries",
+      "Authentication & authorization (JWT/OAuth), permissions, and throttling",
+      "Task queues & scheduling with Celery and Redis",
+      "Dockerizing your backend and deploying to cloud platforms (Heroku/AWS)",
+      "Automated testing (pytest) and CI/CD pipelines",
+      "Leveraging AI for code generation, documentation, and backend automation"
+
     ]
   },
   {
@@ -86,12 +100,16 @@ const courses = [
     discountedPrice: 5000,
     color: "text-indigo-500",
     features: [
-      "مفاهيم C# الأساسية",
-      "ASP.NET Core MVC و Web API",
-      "Entity Framework Core",
-      "تكامل مع SQL Server",
-      "المصادقة باستخدام JWT",
-      "الاستضافة عبر IIS وAzure"
+      "C# fundamentals, OOP, and .NET runtime essentials",
+      "ASP.NET Core MVC and building RESTful Web APIs",
+      "Entity Framework Core, LINQ, and database migrations",
+      "SQL Server integration, schema design, and stored procedures",
+      "Authentication & authorization with Identity and JWT tokens",
+      "Dependency Injection, Clean Architecture, and SOLID principles",
+      "Docker containers, Azure deployment, and IIS hosting basics",
+      "Logging, monitoring, and debugging production issues",
+      "AI integration (Azure Cognitive Services, OpenAI APIs) to enhance your apps"
+
     ]
   },
   {
@@ -106,12 +124,16 @@ const courses = [
     discountedPrice: 4000,
     color: "text-yellow-400",
     features: [
-      "أساسيات لغة C++",
-      "هياكل التحكم والحلقات",
-      "الدوال ومفاهيم البرمجة الكائنية",
-      "هياكل البيانات (Arrays, LinkedList, Stack, Queue, Tree)",
-      "الخوارزميات (الفرز، البحث، التكرار)",
-      "مقدمة في قواعد البيانات (SQL و ERD)"
+      "C++ syntax, variables, data types, and standard input/output",
+      "Control flow (conditions, loops) and error handling basics",
+      "Functions, modularization, and Object-Oriented Programming concepts",
+      "Data structures (Arrays, Linked Lists, Stacks, Queues, Trees)",
+      "Algorithms (sorting, searching, recursion) and complexity analysis",
+      "Debugging strategies, IDE usage, and code optimization tips",
+      "Introduction to databases (SQL basics and ERD diagrams)",
+      "Version control with Git/GitHub and collaborative workflows",
+      "How to leverage AI tools to practice, debug, and improve your solutions"
+
     ]
   },
   {
@@ -126,11 +148,16 @@ const courses = [
     discountedPrice: 6000,
     color: "text-pink-400",
     features: [
-      "البرمجة باستخدام Scratch",
-      "تطوير الألعاب للأطفال",
-      "مقدمة إلى Python من خلال مشاريع ممتعة",
-      "التفكير الإبداعي وحل المشكلات",
-      "تحديات تفاعلية عملية"
+      "Scratch basics: drag-and-drop coding and game logic for kids",
+      "Designing simple games and interactive stories",
+      "Intro to Python through fun mini-projects and visual examples",
+      "Logical thinking, problem-solving, and algorithmic reasoning",
+      "Creative challenges and weekly hands-on activities",
+      "Teamwork, communication, and presenting project ideas",
+      "Safe internet practices and digital citizenship",
+      "Showcasing projects to parents and earning badges/rewards",
+      "Simple AI concepts to inspire creativity and curiosity"
+
     ]
   }
 ];
