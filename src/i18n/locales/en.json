@@ -1,0 +1,187 @@
+{
+  "navigation": {
+    "home": "Home",
+    "about": "About Us",
+    "courses": "Courses",
+    "children": "For Kids",
+    "testimonials": "Reviews",
+    "contact": "Contact Us",
+    "register": "Register Now",
+    "academy": "PR TEC Academy"
+  },
+  "hero": {
+    "title": "Learn Programming with",
+    "academy": "PR TEC Academy",
+    "subtitle": "A leading programming academy that transforms beginners into confident developers",
+    "description": "Join thousands of students who changed their lives with our practical courses designed specifically for local and global job markets. From zero to professional, we're with you every step of the way.",
+    "startJourney": "Start Your Journey Now",
+    "freeTrial": "Try for Free",
+    "stats": {
+      "students": "Graduated Students",
+      "employmentRate": "Employment Rate",
+      "partners": "Industry Partners",
+      "rating": "Student Rating"
+    }
+  },
+  "about": {
+    "title": "About",
+    "academy": "PR TEC Academy",
+    "subtitle": "We are a leading programming academy that transforms beginners into confident developers through hands-on project-based learning and industry-relevant content.",
+    "mainTitle": "Preparing the Next Generation of Programmers",
+    "description1": "PR TEC Academy was founded in 2023 and quickly became at the forefront of programming education by providing comprehensive courses that bridge academic learning with job market requirements.",
+    "description2": "Our mission is simple: provide high-quality programming education for everyone regardless of background or previous experience. We believe anyone can become an outstanding programmer with the right guidance and practical training.",
+    "description3": "From children taking their first steps in programming to professionals seeking to develop their skills, we provide a supportive learning environment that encourages creativity, problem-solving, and technical excellence.",
+    "learnMore": "Learn More About Our Journey",
+    "whyChoose": "Why Choose",
+    "features": {
+      "expertTrainers": {
+        "title": "Expert Trainers",
+        "description": "Learn from professionals with over 10 years of experience"
+      },
+      "smallGroups": {
+        "title": "Small Groups",
+        "description": "Personal attention for each student with maximum 15 students per batch"
+      },
+      "practicalProjects": {
+        "title": "Practical Projects",
+        "description": "Build real applications and projects to add to your portfolio"
+      },
+      "flexibleSchedule": {
+        "title": "Flexible Schedule",
+        "description": "Evening and weekend groups to fit your schedule"
+      },
+      "latestTech": {
+        "title": "Latest Technologies",
+        "description": "Learn using the latest tools and technologies in the market"
+      },
+      "careerSupport": {
+        "title": "Career Support",
+        "description": "Career guidance and employment support for all graduates"
+      }
+    },
+    "achievements": {
+      "graduates": "Graduated Students",
+      "employmentRate": "Employment Rate",
+      "partners": "Industry Partners",
+      "rating": "Student Rating"
+    },
+    "readyToStart": "Ready to Start Your Programming Journey?",
+    "readyDescription": "Join thousands of students who changed their lives with PR TEC Academy. Take the first step towards a professional career.",
+    "browseCourses": "Browse Courses",
+    "bookFreeTrial": "Book Free Trial"
+  },
+  "courses": {
+    "title": "Our Courses",
+    "subtitle": "Choose the right course for you and start your programming journey",
+    "viewDetails": "View Details",
+    "enrollNow": "Enroll Now",
+    "backToCourses": "Back to Courses",
+    "whatYouLearn": "What You'll Learn",
+    "targetAudience": "Target Audience",
+    "duration": "Duration",
+    "modules": "Modules",
+    "lessons": "Lessons",
+    "level": "Level",
+    "students": "Students",
+    "rating": "Rating",
+    "originalPrice": "Original Price",
+    "currentPrice": "Current Price",
+    "flutter": {
+      "title": "Flutter App Development",
+      "description": "Learn to develop cross-platform mobile applications using Flutter and Dart",
+      "shortDescription": "Professional mobile app development with Flutter"
+    },
+    "frontend": {
+      "title": "Frontend Development",
+      "description": "Master interactive website development using HTML, CSS, JavaScript and React",
+      "shortDescription": "Modern interactive website development"
+    },
+    "python": {
+      "title": "Python Server Programming",
+      "description": "Learn server development and APIs using Python and Django",
+      "shortDescription": "Professional server and API development"
+    },
+    "csharp": {
+      "title": "C# & .NET Programming",
+      "description": "Master application development using C# and .NET Framework",
+      "shortDescription": "Desktop and web application development"
+    },
+    "fallbackMessage": "Showing cached data temporarily. Database integration will be updated soon."
+  },
+  "children": {
+    "title": "Programming Education",
+    "subtitle": "for Kids",
+    "description": "We offer programming courses for children aged 6 to 16, in a simple and fun way that suits each age group.",
+    "whatWillLearn": "What Will They Learn?",
+    "bookSpot": "Book a Spot for Your Child",
+    "ageGroups": {
+      "young": {
+        "age": "6 to 8 years old",
+        "title": "Little Programmer",
+        "description": "Simple introduction to programming concepts in a fun way"
+      },
+      "middle": {
+        "age": "9 to 12 years old",
+        "title": "Future Developer",
+        "description": "Game and simple app programming using Scratch and Python"
+      },
+      "teen": {
+        "age": "13 to 16 years old",
+        "title": "Young Programmer",
+        "description": "Advanced programming projects and introduction to web and app development"
+      }
+    }
+  },
+  "testimonials": {
+    "title": "Student",
+    "subtitle": "Success Stories",
+    "description": "Don't just take our word for it, here's what our graduates said about their exceptional learning experience with PR TEC Academy.",
+    "course": "Course:",
+    "outcome": "Outcome:",
+    "additionalStories": "Additional Success Stories",
+    "readyForSuccess": "Are You Ready to Write Your Success Story?",
+    "readyDescription": "Join thousands of students who changed their lives with PR TEC Academy. Your story might be next!",
+    "startNow": "Start Your Journey Now"
+  },
+  "contact": {
+    "title": "Contact",
+    "subtitle": "Us",
+    "description": "Ready to start your programming journey? We're here to help you choose the right course and answer all your questions. Let's talk about your tech future!",
+    "contactInfo": "Contact Information",
+    "contactDescription": "We're always happy to help! Contact us through any of the following methods or visit us.",
+    "workingHours": "Working Hours",
+    "workingHoursDetails": "Saturday - Thursday: 9 AM - 8 PM",
+    "callNow": "Call Now",
+    "quickActions": {
+      "bookTrial": {
+        "title": "Book Trial Session",
+        "description": "Experience our teaching method yourself",
+        "badge": "Free"
+      },
+      "talkConsultant": {
+        "title": "Talk to Consultant",
+        "description": "Get personalized course recommendations",
+        "badge": "Online"
+      },
+      "joinSession": {
+        "title": "Join Info Session",
+        "description": "Weekly sessions every Saturday",
+        "badge": "Group"
+      }
+    }
+  },
+  "common": {
+    "loading": "Loading...",
+    "error": "An error occurred",
+    "tryAgain": "Try Again",
+    "success": "Success",
+    "close": "Close",
+    "save": "Save",
+    "cancel": "Cancel",
+    "submit": "Submit",
+    "next": "Next",
+    "previous": "Previous",
+    "viewMore": "View More",
+    "viewLess": "View Less"
+  }
+}

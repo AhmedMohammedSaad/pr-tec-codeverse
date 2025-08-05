@@ -2,6 +2,7 @@ import { useState, useEffect } from "react";
 import { Card, CardContent, CardDescription, CardHeader, CardTitle } from "@/components/ui/card";
 import { Button } from "@/components/ui/button";
 import { Star, ChevronLeft, ChevronRight, Quote } from "lucide-react";
+import { useTestimonials } from "@/hooks/useTestimonials";
 
 const testimonials = [
   {

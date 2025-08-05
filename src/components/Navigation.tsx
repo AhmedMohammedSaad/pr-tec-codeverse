@@ -1,19 +1,24 @@
 import { useState } from "react";
 import { Button } from "@/components/ui/button";
-import { Menu, X, Code, Sparkles } from "lucide-react";
+import { Menu, X, Code, Sparkles, Globe } from "lucide-react";
+import { useTranslation } from "react-i18next";
 
 const Navigation = () => {
   const [isOpen, setIsOpen] = useState(false);
+  const { t, i18n } = useTranslation();
 
   const navItems = [
-    { name: "الرئيسية", href: "#home" },
-    { name: "   ", href: "  " },
-    { name: "من نحن", href: "#about" },
-    { name: "الدورات", href: "#courses" },
-    { name: "للأطفال", href: "#children" },
-    { name: "الآراء", href: "#testimonials" },
-   // { name: "تواصل معنا", href: "#contact" },
+    { name: t("navigation.home"), href: "#home" },
+    { name: t("navigation.about"), href: "#about" },
+    { name: t("navigation.courses"), href: "#courses" },
+    { name: t("navigation.children"), href: "#children" },
+    { name: t("navigation.testimonials"), href: "#testimonials" },
   ];
+
+  const toggleLanguage = () => {
+    const newLang = i18n.language === 'ar' ? 'en' : 'ar';
+    i18n.changeLanguage(newLang);
+  };
 
   return (
     <nav
@@ -29,7 +34,7 @@ const Navigation = () => {
               <Sparkles className="h-4 w-4 text-accent absolute -top-1 -right-1" />
             </div>
             <span className="text-xl font-bold bg-gradient-to-r from-primary to-accent bg-clip-text text-transparent">
-              أكاديمية PR TEC
+              {t("navigation.academy")}
             </span>
           </div>
 
@@ -45,7 +50,15 @@ const Navigation = () => {
                 <span className="absolute -bottom-1 right-0 w-0 h-0.5 bg-primary transition-all duration-300 group-hover:w-full"></span>
               </a>
             ))}
-            {/* <Button className="btn-glow">سجل الآن</Button> */}
+            <Button
+              variant="ghost"
+              size="sm"
+              onClick={toggleLanguage}
+              className="flex items-center gap-2"
+            >
+              <Globe className="h-4 w-4" />
+              {i18n.language === 'ar' ? 'EN' : 'ع'}
+            </Button>
           </div>
 
           {/* زر القائمة للجوال */}
@@ -74,7 +87,15 @@ const Navigation = () => {
                   {item.name}
                 </a>
               ))}
-               {/* <Button className="btn-glow w-full mt-4">سجل الآن</Button> */}
+              <Button
+                variant="ghost"
+                size="sm"
+                onClick={toggleLanguage}
+                className="flex items-center gap-2 w-full mt-4"
+              >
+                <Globe className="h-4 w-4" />
+                {i18n.language === 'ar' ? 'English' : 'العربية'}
+              </Button>
             </div>
           </div>
         )}
