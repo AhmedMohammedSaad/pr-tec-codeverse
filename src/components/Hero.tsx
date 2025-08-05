@@ -1,9 +1,12 @@
 import { motion } from "framer-motion";
 import { Button } from "@/components/ui/button";
 import { Code2, Zap } from "lucide-react";
+import { useTranslation } from "react-i18next";
 import heroImage from "@/assets/hero-coding.jpg";
 
 const Hero = () => {
+  const { t } = useTranslation();
+  
   return (
     <section
       id="home"
@@ -30,9 +33,9 @@ const Hero = () => {
           className="text-4xl md:text-6xl lg:text-7xl font-bold mb-6"
         >
           <span className="block mb-2">
-            أتقن{" "}
+            {t("hero.title")}{" "}
             <span className="bg-gradient-to-r from-primary to-accent bg-clip-text text-transparent">
-              البرمجة
+              {t("hero.academy")}
             </span>
           </span>
 
@@ -50,7 +53,7 @@ const Hero = () => {
             animate={{ opacity: 1, y: 0 }}
             transition={{ delay: 1.8, duration: 0.8 }}
           >
-            PR TEC Academy
+            {t("navigation.academy")}
           </motion.span>
         </motion.h1>
 
@@ -61,9 +64,7 @@ const Hero = () => {
           animate={{ opacity: 1, y: 0 }}
           transition={{ delay: 2.4, duration: 0.8 }}
         >
-           وفّرنا لك مدرّسين بخبرة أكتر من 6 سنين في البرمجة، جاهزين يعلّموك خطوة بخطوة
-هتلاقي تحديات ممتعة، جوائز، وتحفيزات، تحافظ على شغفك
-ابدأ معانا دلوقتي وخلّي شغلك يحكي قصتك
+          {t("hero.description")}
         </motion.p>
 
         {/* الإحصائيات */}
@@ -76,15 +77,15 @@ const Hero = () => {
           <div className="flex flex-wrap justify-center gap-8 text-sm md:text-base py-0">
             <div className="text-center">
               <div className="text-2xl md:text-3xl font-bold text-primary">+500</div>
-              <div className="text-muted-foreground">طالب تم تدريبه</div>
+              <div className="text-muted-foreground">{t("hero.stats.students")}</div>
             </div>
             <div className="text-center">
               <div className="text-2xl md:text-3xl font-bold text-accent">٪95</div>
-              <div className="text-muted-foreground">معدل النجاح</div>
+              <div className="text-muted-foreground">{t("hero.stats.employmentRate")}</div>
             </div>
             <div className="text-center">
               <div className="text-2xl md:text-3xl font-bold text-primary">+50</div>
-              <div className="text-muted-foreground">مشروع تم تنفيذه</div>
+              <div className="text-muted-foreground">{t("hero.stats.partners")}</div>
             </div>
           </div>
         </motion.div>

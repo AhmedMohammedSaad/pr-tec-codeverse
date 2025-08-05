@@ -1,8 +1,10 @@
 import { Button } from "@/components/ui/button";
 import { Card, CardContent, CardDescription, CardHeader, CardTitle } from "@/components/ui/card";
 import { Baby, Zap } from "lucide-react";
+import { useTranslation } from "react-i18next";
 
 const ChildrenSection = () => {
+  const { t } = useTranslation();
   const ageGroups = [
     {
       age: "من 6 إلى 8 سنوات",
