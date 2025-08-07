@@ -4,10 +4,15 @@ import { Card, CardContent, CardDescription, CardHeader, CardTitle } from "@/com
 import { Input } from "@/components/ui/input";
 import { Textarea } from "@/components/ui/textarea";
 import { Badge } from "@/components/ui/badge";
+import { Label } from "@/components/ui/label";
 import { MapPin, Phone, Mail, Clock, Send, MessageCircle, Calendar, Users } from "lucide-react";
 import { useToast } from "@/hooks/use-toast";
+import { useTranslation } from "react-i18next";
 
 const Contact = () => {
+  const { t } = useTranslation();
+  const { toast } = useToast();
+  
   const [formData, setFormData] = useState({
     name: "",
     email: "",
@@ -17,40 +22,55 @@ const Contact = () => {
   });
    
 
-  const handleChange = (e) => {
+  const handleInputChange = (e) => {
     setFormData(prev => ({
       ...prev,
       [e.target.name]: e.target.value
     }));
   };
 
+  const handleSubmit = (e) => {
+    e.preventDefault();
+    toast({
+      title: t('contact.form.success.title'),
+      description: t('contact.form.success.description'),
+    });
+    setFormData({
+      name: "",
+      email: "",
+      phone: "",
+      course: "",
+      message: ""
+    });
+  };
+
   const contactInfo = [
     {
       icon: Clock,
-      title: "مواعيد العمل",
-      details: ["السبت - الخميس : 9 صباحًا - 8 مساءً"],
-      action: "اتصل الآن"
+      title: t('contact.workingHours.title'),
+      details: [t('contact.workingHours.schedule')],
+      action: t('contact.workingHours.action')
     }
   ];
 
   const quickActions = [
     {
       icon: Calendar,
-      title: "احجز حصة تجريبية",
-      description: "اختبر طريقة تدريسنا بنفسك",
-      badge: "مجاني"
+      title: t('contact.quickActions.trial.title'),
+      description: t('contact.quickActions.trial.description'),
+      badge: t('contact.quickActions.trial.badge')
     },
     {
       icon: MessageCircle,
-      title: "تحدث مع مستشار",
-      description: "احصل على توصيات مخصصة للدورات",
-      badge: "أونلاين"
+      title: t('contact.quickActions.consultant.title'),
+      description: t('contact.quickActions.consultant.description'),
+      badge: t('contact.quickActions.consultant.badge')
     },
     {
       icon: Users,
-      title: "انضم إلى جلسة تعريفية",
-      description: "جلسات أسبوعية كل سبت",
-      badge: "جماعية"
+      title: t('contact.quickActions.session.title'),
+      description: t('contact.quickActions.session.description'),
+      badge: t('contact.quickActions.session.badge')
     }
   ];
 
@@ -59,10 +79,10 @@ const Contact = () => {
       <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
         <div className="text-center mb-16 section-reveal">
           <h2 className="text-4xl md:text-5xl font-bold mb-6">
-            تواصل <span className="bg-gradient-to-r from-primary to-accent bg-clip-text text-transparent">معنا</span>
+            {t('contact.title')} <span className="bg-gradient-to-r from-primary to-accent bg-clip-text text-transparent">{t('contact.titleHighlight')}</span>
           </h2>
           <p className="text-xl text-muted-foreground max-w-3xl mx-auto">
-            مستعد لبدء رحلتك في البرمجة؟ نحن هنا لمساعدتك في اختيار الدورة المناسبة والإجابة على كل استفساراتك. دعنا نتحدث عن مستقبلك التقني!
+            {t('contact.subtitle')}
           </p>
         </div>
 
@@ -80,11 +100,81 @@ const Contact = () => {
             </Card>
           ))}
         </div>
+
+        <div className="grid lg:grid-cols-2 gap-12">
+          <div className="section-reveal">
+            <Card className="course-card">
+              <CardHeader>
+                <CardTitle className="text-2xl">{t('contact.form.title')}</CardTitle>
+                <CardDescription>{t('contact.form.description')}</CardDescription>
+              </CardHeader>
+              <CardContent>
+                <form onSubmit={handleSubmit} className="space-y-6">
+                  <div>
+                    <Label htmlFor="name">{t('contact.form.name.label')}</Label>
+                    <Input
+                      id="name"
+                      name="name"
+                      value={formData.name}
+                      onChange={handleInputChange}
+                      placeholder={t('contact.form.name.placeholder')}
+                      required
+                    />
+                  </div>
+                  
+                  <div>
+                    <Label htmlFor="email">{t('contact.form.email.label')}</Label>
+                    <Input
+                      id="email"
+                      name="email"
+                      type="email"
+                      value={formData.email}
+                      onChange={handleInputChange}
+                      placeholder={t('contact.form.email.placeholder')}
+                      required
+                    />
+                  </div>
+                  
+                  <div>
+                    <Label htmlFor="phone">{t('contact.form.phone.label')}</Label>
+                    <Input
+                      id="phone"
+                      name="phone"
+                      type="tel"
+                      value={formData.phone}
+                      onChange={handleInputChange}
+                      placeholder={t('contact.form.phone.placeholder')}
+                      required
+                    />
+                  </div>
+                  
+                  <div>
+                    <Label htmlFor="message">{t('contact.form.message.label')}</Label>
+                    <Textarea
+                      id="message"
+                      name="message"
+                      value={formData.message}
+                      onChange={handleInputChange}
+                      placeholder={t('contact.form.message.placeholder')}
+                      rows={4}
+                      required
+                    />
+                  </div>
+                  
+                  <Button type="submit" className="w-full btn-glow" size="lg">
+                    <Send className="w-4 h-4 mr-2" />
+                    {t('contact.form.submit')}
+                  </Button>
+                </form>
+              </CardContent>
+            </Card>
+          </div>
+
           <div className="space-y-6 section-reveal">
             <div>
-              <h3 className="text-2xl font-bold mb-6">معلومات التواصل</h3>
+              <h3 className="text-2xl font-bold mb-6">{t('contact.info.title')}</h3>
               <p className="text-muted-foreground mb-8">
-                يسعدنا دائمًا مساعدتك! تواصل معنا من خلال أي من الوسائل التالية أو قم بزيارتنا.
+                {t('contact.info.description')}
               </p>
             </div>
 
@@ -110,7 +200,7 @@ const Contact = () => {
             </div>
           </div>
         </div>
-   
+      </div>
     </section>
   );
 };

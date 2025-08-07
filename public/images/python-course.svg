@@ -1,0 +1,65 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 400 300" width="400" height="300">
+  <defs>
+    <linearGradient id="pythonGrad" x1="0%" y1="0%" x2="100%" y2="100%">
+      <stop offset="0%" style="stop-color:#8E24AA;stop-opacity:1" />
+      <stop offset="100%" style="stop-color:#AB47BC;stop-opacity:1" />
+    </linearGradient>
+  </defs>
+  
+  <!-- Background -->
+  <rect width="400" height="300" fill="url(#pythonGrad)"/>
+  
+  <!-- Python logo inspired design -->
+  <g transform="translate(150, 80)">
+    <!-- Python snake-like curves -->
+    <path d="M0,40 Q20,20 40,40 Q60,60 80,40 Q100,20 120,40" stroke="#FFD54F" stroke-width="8" fill="none" opacity="0.9"/>
+    <path d="M10,60 Q30,40 50,60 Q70,80 90,60 Q110,40 130,60" stroke="#FFF176" stroke-width="6" fill="none" opacity="0.8"/>
+    
+    <!-- Server/database representation -->
+    <g transform="translate(20, 80)">
+      <rect x="0" y="0" width="80" height="40" rx="4" fill="white" opacity="0.9"/>
+      <rect x="5" y="5" width="70" height="6" rx="2" fill="#E1BEE7"/>
+      <rect x="5" y="15" width="50" height="6" rx="2" fill="#E1BEE7"/>
+      <rect x="5" y="25" width="60" height="6" rx="2" fill="#E1BEE7"/>
+    </g>
+  </g>
+  
+  <!-- Code terminal -->
+  <g transform="translate(50, 180)">
+    <rect x="0" y="0" width="300" height="80" rx="6" fill="#1a1a1a" opacity="0.9"/>
+    
+    <!-- Terminal header -->
+    <rect x="0" y="0" width="300" height="20" rx="6" fill="#333"/>
+    <circle cx="15" cy="10" r="3" fill="#ff5f56"/>
+    <circle cx="30" cy="10" r="3" fill="#ffbd2e"/>
+    <circle cx="45" cy="10" r="3" fill="#27ca3f"/>
+    
+    <!-- Code lines -->
+    <text x="10" y="35" font-family="monospace" font-size="10" fill="#4CAF50">$ python manage.py runserver</text>
+    <text x="10" y="50" font-family="monospace" font-size="10" fill="#FFF176">Django development server starting...</text>
+    <text x="10" y="65" font-family="monospace" font-size="10" fill="#81C784">Server running on http://127.0.0.1:8000/</text>
+  </g>
+  
+  <!-- Django/Framework symbols -->
+  <g transform="translate(30, 50)" fill="white" opacity="0.7">
+    <rect x="0" y="0" width="30" height="30" rx="4" fill="white" opacity="0.2"/>
+    <text x="8" y="20" font-family="monospace" font-size="12" fill="white">Py</text>
+  </g>
+  
+  <!-- Database symbol -->
+  <g transform="translate(320, 100)">
+    <ellipse cx="25" cy="10" rx="20" ry="8" fill="white" opacity="0.8"/>
+    <rect x="5" y="10" width="40" height="30" fill="white" opacity="0.8"/>
+    <ellipse cx="25" cy="40" rx="20" ry="8" fill="white" opacity="0.8"/>
+    
+    <!-- Database lines -->
+    <ellipse cx="25" cy="18" rx="15" ry="5" fill="none" stroke="#8E24AA" stroke-width="1"/>
+    <ellipse cx="25" cy="26" rx="15" ry="5" fill="none" stroke="#8E24AA" stroke-width="1"/>
+    <ellipse cx="25" cy="34" rx="15" ry="5" fill="none" stroke="#8E24AA" stroke-width="1"/>
+  </g>
+  
+  <!-- Decorative elements -->
+  <circle cx="80" cy="30" r="15" fill="white" opacity="0.2"/>
+  <circle cx="350" cy="250" r="20" fill="white" opacity="0.15"/>
+  <circle cx="30" cy="120" r="8" fill="white" opacity="0.3"/>
+</svg>

@@ -1,25 +1,22 @@
 import { Button } from "@/components/ui/button";
 import { Card, CardContent, CardDescription, CardHeader, CardTitle } from "@/components/ui/card";
 import { Baby, Zap } from "lucide-react";
+import { useTranslation } from "react-i18next";
 
 const ChildrenSection = () => {
+  const { t } = useTranslation();
+  
   const ageGroups = [
     {
-      age: "من 6 إلى 8 سنوات",
-      title: "المبرمج الصغير",
-      description: "مقدمة مبسطة لمفاهيم البرمجة بطريقة ممتعة",
+      id: 'group1',
       features: ["Scratch Jr.", "المنطق الأساسي", "رسوم متحركة بسيطة", "قصص تفاعلية"]
     },
     {
-      age: "من 9 إلى 12 سنة",
-      title: "مطور المستقبل",
-      description: "برمجة ألعاب وتطبيقات بسيطة باستخدام Scratch وPython",
+      id: 'group2',
       features: ["Scratch", "برمجة ألعاب", "أساسيات Python", "حل المشكلات"]
     },
     {
-      age: "من 13 إلى 16 سنة",
-      title: "المبرمج الشاب",
-      description: "مشاريع برمجية متقدمة ومقدمة لتطوير الويب والتطبيقات",
+      id: 'group3',
       features: ["مشاريع Python", "تطوير مواقع", "تطبيقات موبايل", "بناء ملف أعمال"]
     }
   ];
@@ -32,11 +29,11 @@ const ChildrenSection = () => {
           <div className="flex items-center justify-center mb-6">
             <Baby className="h-12 w-12 text-accent mr-4" />
             <h2 className="text-4xl md:text-5xl font-bold">
-              تعليم البرمجة <span className="bg-gradient-to-r from-accent to-primary bg-clip-text text-transparent">للأطفال</span>
+              {t('children.title')} <span className="bg-gradient-to-r from-accent to-primary bg-clip-text text-transparent">{t('children.titleHighlight')}</span>
             </h2>
           </div>
           <p className="text-lg text-muted-foreground max-w-2xl mx-auto">
-            بنقدم كورسات برمجة للأطفال من سن 6 لحد 16 سنة، بشكل بسيط وممتع، وبيتناسب مع كل فئة عمرية.
+            {t('children.subtitle')}
           </p>
         </div>
 
@@ -50,17 +47,17 @@ const ChildrenSection = () => {
                     <span className="text-2xl">👦</span>
                   </div>
                   <CardTitle className="text-xl group-hover:text-accent transition-colors">
-                    {group.title}
+                    {t(`children.ageGroups.${group.id}.title`)}
                   </CardTitle>
-                  <div className="text-accent font-semibold">{group.age}</div>
+                  <div className="text-accent font-semibold">{t(`children.ageGroups.${group.id}.age`)}</div>
                   <CardDescription>
-                    {group.description}
+                    {t(`children.ageGroups.${group.id}.description`)}
                   </CardDescription>
                 </CardHeader>
 
                 <CardContent>
                   <div className="space-y-2 mb-6">
-                    <h4 className="font-semibold text-sm">هيتعلم إيه؟</h4>
+                    <h4 className="font-semibold text-sm">{t('children.whatWillLearn')}</h4>
                     <ul className="space-y-1">
                       {group.features.map((feature) => (
                         <li key={feature} className="text-sm text-muted-foreground flex items-center">
@@ -72,7 +69,7 @@ const ChildrenSection = () => {
                   </div>
 
                   <Button className="w-full btn-glow">
-                    احجز مكان لطفلك
+                    {t('children.bookPlace')}
                   </Button>
                 </CardContent>
               </Card>

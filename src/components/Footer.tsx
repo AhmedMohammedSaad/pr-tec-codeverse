@@ -14,37 +14,39 @@ import {
   Phone,
   MapPin,
 } from "lucide-react";
+import { useTranslation } from "react-i18next";
 
 const Footer = () => {
+  const { t } = useTranslation();
   const currentYear = new Date().getFullYear();
 
   const footerLinks = {
     courses: [
-      { name: "Flutter Development", href: "#courses" },
-      { name: "Front-End Web Dev", href: "#courses" },
-      { name: "Back-End Development", href: "#courses" },
-      { name: "Programming Basics", href: "#courses" },
-      { name: "Kids Programming", href: "#children" },
+      { name: "footer.courses.flutter", href: "#courses" },
+      { name: "footer.courses.frontend", href: "#courses" },
+      { name: "footer.courses.backend", href: "#courses" },
+      { name: "footer.courses.basics", href: "#courses" },
+      { name: "footer.courses.kids", href: "#children" },
     ],
     company: [
-      { name: "من نحن", href: "#about" },
-      { name: "مدربونا", href: "#about" },
-      { name: "قصص نجاح", href: "#testimonials" },
-      { name: "خدمات التوظيف", href: "#contact" },
-      { name: "المدونة", href: "#" },
+      { name: t('footer.links.aboutUs'), href: "#about" },
+      { name: t('footer.links.ourTrainers'), href: "#about" },
+      { name: t('footer.links.successStories'), href: "#testimonials" },
+      { name: t('footer.links.employmentServices'), href: "#contact" },
+      { name: t('footer.links.blog'), href: "#" },
     ],
     support: [
-      { name: "تواصل معنا", href: "#contact" },
-      { name: "الأسئلة الشائعة", href: "#" },
-      { name: "بوابة الطلاب", href: "#" },
-      { name: "الدعم الفني", href: "#" },
-      { name: "مواد الدورة", href: "#" },
+      { name: t('footer.links.contactUs'), href: "#contact" },
+      { name: t('footer.links.faq'), href: "#" },
+      { name: t('footer.links.studentPortal'), href: "#" },
+      { name: t('footer.links.technicalSupport'), href: "#" },
+      { name: t('footer.links.courseMaterials'), href: "#" },
     ],
     legal: [
-      { name: "سياسة الخصوصية", href: "#" },
-      { name: "شروط الخدمة", href: "#" },
-      { name: "سياسة الاسترجاع", href: "#" },
-      { name: "سياسة الكوكيز", href: "#" },
+      { name: t('footer.links.privacyPolicy'), href: "#" },
+      { name: t('footer.links.termsOfService'), href: "#" },
+      { name: t('footer.links.refundPolicy'), href: "#" },
+      { name: t('footer.links.cookiePolicy'), href: "#" },
     ],
   };
 
@@ -69,21 +71,23 @@ const Footer = () => {
         <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 py-12">
           <div className="text-center max-w-3xl mx-auto">
             <h3 className="text-2xl font-bold mb-4">
-              اشترك في النشرة الإخبارية{" "}
+              {t('footer.newsletter.title')}{" "}
               <span className="text-primary">PR TEC Academy</span>
             </h3>
             <p className="text-muted-foreground mb-6">
-              احصل على آخر التحديثات، نصائح برمجية، عروض حصرية، ومحتوى تعليمي مميز مباشرة على بريدك الإلكتروني.
+              {t('footer.newsletter.description')}
             </p>
 
             <div className="flex flex-col sm:flex-row gap-3 max-w-md mx-auto">
-              {/* <Input */}
-                 
-            
-              {/* <Button className="btn-glow whitespace-nowrap"> */}
-                {/* <Mail className="mr-2 h-4 w-4" /> */}
-                {/* اشترك الآن */}
-              {/* </Button> */}
+              <Input
+                type="email"
+                placeholder={t('footer.newsletter.placeholder')}
+                className="flex-1"
+              />
+              <Button className="btn-glow whitespace-nowrap">
+                <Mail className="mr-2 h-4 w-4" />
+                {t('footer.newsletter.subscribe')}
+              </Button>
             </div>
 
             <p className="text-xs text-muted-foreground mt-3">
@@ -108,8 +112,7 @@ const Footer = () => {
             </div>
 
             <p className="text-muted-foreground mb-6 leading-relaxed">
-              نُمكّن الجيل القادم من المطورين من خلال تعليم برمجي شامل وتطبيقي، من الأطفال حتى المحترفين.
-              نحن نجعل البرمجة متاحة للجميع.
+              {t('footer.description')}
             </p>
 
             {/* <div className="space-y-2 text-sm text-muted-foreground"> */}
@@ -147,10 +150,10 @@ const Footer = () => {
           {/* Links Sections */}
           <div className="lg:col-span-4 grid md:grid-cols-4 gap-8">
             {[
-              { title: "الدورات", links: footerLinks.courses },
-              { title: "الشركة", links: footerLinks.company },
-              { title: "الدعم", links: footerLinks.support },
-              { title: "قانوني", links: footerLinks.legal },
+              { title: t('footer.sections.courses'), links: footerLinks.courses },
+              { title: t('footer.sections.company'), links: footerLinks.company },
+              { title: t('footer.sections.support'), links: footerLinks.support },
+              { title: t('footer.sections.legal'), links: footerLinks.legal },
             ].map((section) => (
               <div key={section.title}>
                 <h4 className="font-semibold mb-4 text-primary">{section.title}</h4>
@@ -161,7 +164,7 @@ const Footer = () => {
                         href={link.href}
                         className="text-sm text-muted-foreground hover:text-primary transition-colors duration-300"
                       >
-                        {link.name}
+                        {link.name.startsWith('footer.') ? t(link.name) : link.name}
                       </a>
                     </li>
                   ))}
@@ -175,7 +178,7 @@ const Footer = () => {
 
         <div className="flex flex-col md:flex-row justify-between items-center gap-4">
           <div className="text-sm text-muted-foreground">
-            © {currentYear} PR TEC Academy. جميع الحقوق محفوظة. تم التصميم بكل ❤️ للمبرمجين الطموحين.
+            {t('footer.copyright', { year: currentYear })}
           </div>
           <div className="flex items-center gap-6 text-sm text-muted-foreground">
 

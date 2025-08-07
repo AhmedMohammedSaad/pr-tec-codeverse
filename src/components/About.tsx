@@ -1,46 +1,49 @@
 import { Button } from "@/components/ui/button";
 import { Card, CardContent } from "@/components/ui/card";
 import { CheckCircle, Award, Users, BookOpen, Clock, Zap } from "lucide-react";
+import { useTranslation } from "react-i18next";
 
 const About = () => {
+  const { t } = useTranslation();
+  
   const features = [
     {
-      icon: Award,
-      title: "مدربون خبراء",
-      description: "تعلّم على يد محترفين بخبرة أكثر من 10 سنوات"
+      icon: Users,
+      title: t('about.features.expertTrainers.title'),
+      description: t('about.features.expertTrainers.description')
     },
     {
       icon: Users,
-      title: "مجموعات صغيرة",
-      description: "اهتمام شخصي لكل طالب بحد أقصى 15 طالب في الدفعة"
+      title: t('about.features.smallGroups.title'),
+      description: t('about.features.smallGroups.description')
     },
     {
       icon: BookOpen,
-      title: "مشاريع عملية",
-      description: "بناء تطبيقات حقيقية ومشاريع تضاف لسيرتك الذاتية"
+      title: t('about.features.practicalProjects.title'),
+      description: t('about.features.practicalProjects.description')
     },
     {
       icon: Clock,
-      title: "مواعيد مرنة",
-      description: "مجموعات مسائية وعطلة نهاية الأسبوع لتناسب وقتك"
+      title: t('about.features.flexibleSchedule.title'),
+      description: t('about.features.flexibleSchedule.description')
     },
     {
       icon: Zap,
-      title: "أحدث التقنيات",
-      description: "تعلم باستخدام أحدث الأدوات والتقنيات في السوق"
+      title: t('about.features.latestTech.title'),
+      description: t('about.features.latestTech.description')
     },
     {
-      icon: CheckCircle,
-      title: "دعم وظيفي",
-      description: "إرشاد مهني ودعم في التوظيف لكل الخريجين"
+      icon: Award,
+      title: t('about.features.careerSupport.title'),
+      description: t('about.features.careerSupport.description')
     }
   ];
 
   const achievements = [
-    { number: "500+", label: "طالب تخرجوا" },
-    { number: "95%", label: "نسبة التوظيف" },
-    { number: "50+", label: "شريك صناعي" },
-    { number: "4.9/5", label: "تقييم الطلاب" }
+    { number: "500+", label: t('about.achievements.graduates') },
+    { number: "95%", label: t('about.achievements.employmentRate') },
+    { number: "50+", label: t('about.achievements.industryPartners') },
+    { number: "4.9/5", label: t('about.achievements.studentRating') }
   ];
 
   return (
@@ -49,10 +52,10 @@ const About = () => {
         {/* العنوان */}
         <div className="text-center mb-16 section-reveal">
           <h2 className="text-4xl md:text-5xl font-bold mb-6">
-            عن <span className="bg-gradient-to-r from-primary to-accent bg-clip-text text-transparent">PR TEC Academy</span>
+            {t('about.title')}
           </h2>
           <p className="text-xl text-muted-foreground max-w-3xl mx-auto">
-            نحن أكاديمية برمجة رائدة تهدف لتحويل المبتدئين إلى مطورين واثقين من أنفسهم من خلال تعليم عملي قائم على المشاريع ومحتوى مواكب للصناعة.
+            {t('about.description')}
           </p>
         </div>
 
@@ -60,22 +63,22 @@ const About = () => {
         <div className="grid lg:grid-cols-2 gap-12 items-center mb-20">
           {/* اليسار */}
           <div className="section-reveal">
-            <h3 className="text-3xl font-bold mb-6">نؤهل الجيل القادم من المبرمجين</h3>
+            <h3 className="text-3xl font-bold mb-6">{t('about.subtitle')}</h3>
             <div className="space-y-4 text-muted-foreground">
               <p>
-                تأسست أكاديمية PR TEC في عام 2023، وسرعان ما أصبحت في طليعة تعليم البرمجة من خلال تقديم دورات متكاملة تربط بين الجانب الأكاديمي ومتطلبات سوق العمل.
+                {t('about.description')}
               </p>
               <p>
-                مهمتنا بسيطة: توفير تعليم برمجة عالي الجودة للجميع بغض النظر عن الخلفية أو الخبرة السابقة. نؤمن أن أي شخص يمكنه أن يصبح مبرمجًا مميزًا بالتوجيه الصحيح والتدريب العملي.
+                {t('about.mission')}
               </p>
               <p>
-                من الأطفال الذين يخطون أولى خطواتهم في البرمجة إلى المحترفين الذين يسعون لتطوير مهاراتهم، نوفر بيئة تعليمية داعمة تشجع على الإبداع، وحل المشكلات، والتميز التقني.
+                {t('about.vision')}
               </p>
             </div>
 
             <div className="mt-8">
               <Button className="btn-glow">
-                اعرف المزيد عن رحلتنا
+                {t('about.learnMoreJourney')}
               </Button>
             </div>
           </div>
@@ -102,7 +105,7 @@ const About = () => {
         {/* لماذا نحن */}
         <div className="section-reveal">
           <h3 className="text-3xl font-bold text-center mb-12">
-            لماذا تختار <span className="text-primary">PR TEC Academy؟</span>
+            {t('about.whyChooseUs')}
           </h3>
 
           <div className="grid md:grid-cols-2 lg:grid-cols-3 gap-8">
@@ -125,16 +128,16 @@ const About = () => {
         {/* دعوة للتسجيل */}
         <div className="text-center mt-16 section-reveal">
           <div className="bg-gradient-to-r from-primary/10 to-accent/10 rounded-2xl p-8 border border-primary/20">
-            <h3 className="text-2xl font-bold mb-4">جاهز تبدأ رحلتك في عالم البرمجة؟</h3>
+            <h3 className="text-2xl font-bold mb-4">{t('about.readyToStart')}</h3>
             <p className="text-muted-foreground mb-6 max-w-2xl mx-auto">
-              انضم لآلاف الطلاب اللي غيروا حياتهم مع PR TEC Academy. ابدأ أول خطوة نحو مستقبل مهني احترافي.
+              {t('about.joinThousands')}
             </p>
             <div className="flex flex-col sm:flex-row gap-4 justify-center">
               <Button className="btn-glow">
-                استعرض الدورات
+                {t('about.browseCourses')}
               </Button>
               <Button variant="outline" className="border-primary/50 hover:border-primary hover:bg-primary/10">
-                احجز تجربة مجانية
+                {t('about.bookFreeTrial')}
               </Button>
             </div>
           </div>

@@ -8,15 +8,14 @@ import Testimonials from "@/components/Testimonials";
 import Contact from "@/components/Contact";
 import Footer from "@/components/Footer";
 import WhatsAppFloat from "@/components/WhatsAppFloat";
-import { AnimatedBackground } from "@/components/ui/animated-background";
-import { WaveBackground } from "@/components/ui/wave-background";
+import SEO from "@/components/SEO";
 import { GlowEffect } from "@/components/ui/glow-effect";
 import { StarsBackground } from "@/components/ui/stars-background";
-import { CodeGridBackground } from "@/components/ui/code-grid-background";
-import { MatrixCodeBackground } from "@/components/ui/matrix-code-background";
-import { CirclesBackground } from "@/components/ui/circles-background";
+import NeuralNetworkBackground from "@/components/ui/neural-network-background";
+import { useTranslation } from "react-i18next";
 
 const Index = () => {
+  const { t } = useTranslation();
   // حالة لتتبع ما إذا كانت الصفحة الرئيسية مرئية
   const [isHeroVisible, setIsHeroVisible] = useState(true);
 
@@ -61,40 +60,31 @@ const Index = () => {
   }, []);
 
   return (
-    <div className="min-h-screen bg-background text-right relative" dir="rtl">
-      {/* خلفية الكود المتساقط - تظهر فقط في الصفحة الرئيسية */}
-      {isHeroVisible && <MatrixCodeBackground density={30} speed={0.6} codeColor="hsl(var(--primary) / 0.3)" />}
+    <>
+      <SEO 
+        title={t('seo.pages.home.title')}
+        description={t('seo.pages.home.description')}
+      />
+      <div className="min-h-screen bg-background text-right relative" dir="rtl">
+      {/* خلفية الشبكة العصبية المتحركة */}
+      {isHeroVisible && (
+        <NeuralNetworkBackground 
+          nodeCount={60}
+          connectionDistance={120}
+          animationSpeed={0.3}
+          opacity={0.4}
+          color="hsl(var(--primary) / 0.6)"
+        />
+      )}
       
-      {/* خلفية الدوائر المتحركة */}
-      <CirclesBackground density={10} speed={0.5} />
-      
-      {/* خلفية الشبكة البرمجية */}
-      <CodeGridBackground density={40} speed={0.8} />
-      
-      {/* خلفية النجوم المتحركة */}
-      <StarsBackground starCount={150} speed={0.8} />
-      
-      {/* خلفية متحركة للموقع بالكامل */}
-      <AnimatedBackground density={40} speed={0.5} />
-      
-      {/* تأثيرات ضوئية */}
+      {/* تأثير ضوئي واحد مبسط */}
       <GlowEffect 
-        color="hsl(var(--primary) / 0.15)" 
-        size="xl" 
-        intensity="medium" 
+        color="hsl(var(--primary) / 0.08)" 
+        size="lg" 
+        intensity="low" 
         position="top-right" 
         className="fixed z-0" 
       />
-      <GlowEffect 
-        color="hsl(var(--accent) / 0.1)" 
-        size="xl" 
-        intensity="low" 
-        position="bottom-left" 
-        className="fixed z-0" 
-      />
-      
-      {/* خلفية متموجة */}
-      <WaveBackground />
       
       {/* المحتوى */}
       <div className="relative z-10">
@@ -108,7 +98,8 @@ const Index = () => {
         <Footer />
         <WhatsAppFloat />
       </div>
-    </div>
+      </div>
+    </>
   );
 };
 

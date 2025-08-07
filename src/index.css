@@ -46,9 +46,14 @@ All colors MUST be HSL.
     --glow-accent: 0 0 30px hsl(200 100% 70% / 0.4);
     --shadow-card: 0 8px 32px hsl(270 100% 8% / 0.3);
     
-    /* Animation variables */
-    --transition-smooth: all 0.4s cubic-bezier(0.4, 0, 0.2, 1);
-    --transition-bounce: all 0.6s cubic-bezier(0.68, -0.55, 0.265, 1.55);
+    /* Animation variables - optimized for performance */
+    --transition-smooth: all 0.3s cubic-bezier(0.4, 0, 0.2, 1);
+    --transition-bounce: all 0.4s cubic-bezier(0.68, -0.55, 0.265, 1.55);
+    
+    /* Performance optimizations */
+    --will-change-transform: transform;
+    --backface-visibility: hidden;
+    --perspective: 1000px;
 
     --sidebar-background: 0 0% 98%;
 
@@ -219,5 +224,157 @@ All colors MUST be HSL.
   
   .animate-pulse-glow {
     animation: pulse-glow 2s ease-in-out infinite;
+  }
+
+  /* RTL Support Styles */
+  [dir="rtl"] {
+    direction: rtl;
+  }
+
+  [dir="ltr"] {
+    direction: ltr;
+  }
+
+  /* RTL-specific adjustments */
+  .rtl {
+    direction: rtl;
+  }
+
+  .rtl .space-x-reverse > :not([hidden]) ~ :not([hidden]) {
+    --tw-space-x-reverse: 1;
+  }
+
+  /* RTL text alignment */
+  .rtl .text-left {
+    text-align: right;
+  }
+
+  .rtl .text-right {
+    text-align: left;
+  }
+
+  /* RTL margin and padding adjustments */
+  .rtl .ml-auto {
+    margin-left: unset;
+    margin-right: auto;
+  }
+
+  .rtl .mr-auto {
+    margin-right: unset;
+    margin-left: auto;
+  }
+
+  /* RTL flex direction adjustments */
+  .rtl .flex-row-reverse {
+    flex-direction: row-reverse;
+  }
+
+  /* RTL border radius adjustments */
+  .rtl .rounded-l-lg {
+    border-top-left-radius: 0;
+    border-bottom-left-radius: 0;
+    border-top-right-radius: 0.5rem;
+    border-bottom-right-radius: 0.5rem;
+  }
+
+  .rtl .rounded-r-lg {
+    border-top-right-radius: 0;
+    border-bottom-right-radius: 0;
+    border-top-left-radius: 0.5rem;
+    border-bottom-left-radius: 0.5rem;
+  }
+
+  /* RTL positioning adjustments */
+  .rtl .left-0 {
+    left: unset;
+    right: 0;
+  }
+
+  .rtl .right-0 {
+    right: unset;
+    left: 0;
+  }
+
+  /* RTL transform adjustments */
+  .rtl .translate-x-full {
+    transform: translateX(-100%);
+  }
+
+  .rtl .-translate-x-full {
+    transform: translateX(100%);
+  }
+
+  /* Arabic font improvements */
+  .rtl {
+    font-family: 'Segoe UI', 'Tahoma', 'Arial', 'Helvetica Neue', sans-serif;
+  }
+
+  /* Ensure proper Arabic text rendering */
+  .rtl * {
+    font-feature-settings: "liga" 1, "kern" 1;
+  }
+
+  /* RTL dropdown menu adjustments */
+  .rtl [data-radix-popper-content-wrapper] {
+    transform-origin: right center;
+  }
+
+  /* RTL scroll adjustments */
+  .rtl .overflow-x-auto {
+    direction: rtl;
+  }
+
+  .rtl .overflow-x-auto * {
+    direction: ltr;
+  }
+
+  /* RTL table adjustments */
+  .rtl table {
+    direction: rtl;
+  }
+
+  .rtl th:first-child,
+  .rtl td:first-child {
+    text-align: right;
+  }
+
+  /* Performance optimizations */
+  * {
+    will-change: auto;
+  }
+
+  .motion-element {
+    will-change: transform, opacity;
+    backface-visibility: hidden;
+    transform-style: preserve-3d;
+  }
+
+  /* Reduce motion for users who prefer it */
+  @media (prefers-reduced-motion: reduce) {
+    *,
+    *::before,
+    *::after {
+      animation-duration: 0.01ms !important;
+      animation-iteration-count: 1 !important;
+      transition-duration: 0.01ms !important;
+      scroll-behavior: auto !important;
+    }
+  }
+
+  /* GPU acceleration for smooth animations */
+  .gpu-accelerated {
+    transform: translateZ(0);
+    will-change: transform;
+  }
+
+  /* Optimize images */
+  img {
+    content-visibility: auto;
+    contain-intrinsic-size: 300px 200px;
+  }
+
+  .rtl th:last-child,
+  .rtl td:last-child {
+    text-align: left;
   }
 }

@@ -1,0 +1,454 @@
+{
+  "navigation": {
+    "home": "Home",
+    "about": "About",
+    "courses": "Courses",
+    "contact": "Contact",
+    "testimonials": "Testimonials",
+    "children": "Children"
+  },
+  "hero": {
+    "title": "Master Programming",
+    "subtitle": "PR TEC Academy",
+    "description1": "We've provided you with instructors with more than 6 years of experience in programming, ready to teach you step by step",
+    "description2": "You'll find fun challenges, prizes, and incentives that keep your passion alive",
+    "description3": "Start with us now and let your work tell your story",
+    "stats": {
+      "studentsTrained": "students trained",
+      "successRate": "success rate",
+      "projectsCompleted": "projects completed"
+    },
+    "discoverMore": "Discover More",
+    "altText": "Programming Education",
+    "cta": {
+      "browseCourses": "Browse Courses",
+      "startFree": "Start Free"
+    }
+  },
+  "about": {
+    "title": "About PR TEC Academy",
+    "subtitle": "We prepare the next generation of programmers",
+    "description": "PR TEC Academy was founded in 2023, and quickly became at the forefront of programming education by providing comprehensive courses that connect the academic side with job market requirements.",
+    "mission": "Our mission is simple: to provide high-quality programming education for everyone regardless of background or previous experience. We believe that anyone can become an outstanding programmer with the right guidance and practical training.",
+    "vision": "From children taking their first steps in programming to professionals seeking to develop their skills, we provide a supportive learning environment that encourages creativity, problem-solving, and technical excellence.",
+    "features": {
+      "expertTrainers": {
+        "title": "Expert Trainers",
+        "description": "Learn from professionals with more than 10 years of experience"
+      },
+      "smallGroups": {
+        "title": "Small Groups",
+        "description": "Personal attention for each student with a maximum of 15 students per batch"
+      },
+      "practicalProjects": {
+        "title": "Practical Projects",
+        "description": "Build real applications and projects to add to your resume"
+      },
+      "flexibleSchedule": {
+        "title": "Flexible Schedule",
+        "description": "Evening and weekend groups to fit your schedule"
+      },
+      "latestTech": {
+        "title": "Latest Technologies",
+        "description": "Learn using the latest tools and technologies in the market"
+      },
+      "careerSupport": {
+        "title": "Career Support",
+        "description": "Career guidance and employment support for all graduates"
+      }
+    },
+    "achievements": {
+      "graduates": "graduates",
+      "employmentRate": "employment rate",
+      "industryPartners": "industry partners",
+      "studentRating": "student rating"
+    },
+    "whyChooseUs": "Why choose PR TEC Academy?",
+    "readyToStart": "Ready to start your journey in programming?",
+    "joinThousands": "Join thousands of students who changed their lives with PR TEC Academy. Take the first step towards a professional career.",
+    "browseCourses": "Browse Courses",
+    "bookFreeTrial": "Book Free Trial",
+    "learnMoreJourney": "Learn more about our journey"
+  },
+  "courses": {
+    "title": "Our Courses",
+    "subtitle": "Choose Your Path to Success",
+    "webDevelopment": {
+      "title": "Web Development",
+      "description": "Master HTML, CSS, JavaScript, React, and Node.js",
+      "duration": "12 weeks",
+      "level": "Beginner to Advanced"
+    },
+    "mobileApp": {
+      "title": "Mobile App Development",
+      "description": "Build iOS and Android apps with React Native",
+      "duration": "10 weeks",
+      "level": "Intermediate"
+    },
+    "dataScience": {
+      "title": "Data Science",
+      "description": "Learn Python, Machine Learning, and Data Analysis",
+      "duration": "16 weeks",
+      "level": "Beginner to Advanced"
+    },
+    "enrollNow": "Enroll Now",
+    "learnMore": "Learn More"
+  },
+  "testimonials": {
+    "title": "What Our Students Say",
+    "subtitle": "Success Stories from Our Graduates"
+  },
+  "contact": {
+    "title": "Contact Us",
+    "subtitle": "Get in Touch",
+    "name": "Name",
+    "email": "Email",
+    "message": "Message",
+    "send": "Send Message",
+    "phone": "Phone",
+    "address": "Address",
+    "followUs": "Follow Us"
+  },
+  "footer": {
+    "description": "We empower the next generation of developers through comprehensive and practical programming education, from children to professionals. We make programming accessible to everyone.",
+    "sections": {
+      "courses": "Courses",
+      "company": "Company",
+      "support": "Support",
+      "legal": "Legal"
+    },
+    "courses": {
+      "flutter": "Flutter Development",
+      "frontend": "Front-End Web Dev",
+      "backend": "Back-End Development",
+      "basics": "Programming Basics",
+      "kids": "Kids Programming"
+    },
+    "links": {
+      "aboutUs": "About Us",
+      "ourTrainers": "Our Trainers",
+      "successStories": "Success Stories",
+      "employmentServices": "Employment Services",
+      "blog": "Blog",
+      "contactUs": "Contact Us",
+      "faq": "FAQ",
+      "studentPortal": "Student Portal",
+      "technicalSupport": "Technical Support",
+      "courseMaterials": "Course Materials",
+      "privacyPolicy": "Privacy Policy",
+      "termsOfService": "Terms of Service",
+      "refundPolicy": "Refund Policy",
+      "cookiePolicy": "Cookie Policy"
+    },
+    "newsletter": {
+      "title": "Subscribe to Newsletter",
+      "description": "Get the latest updates, programming tips, exclusive offers, and premium educational content directly to your email.",
+      "placeholder": "Enter your email",
+      "subscribe": "Subscribe"
+    },
+    "copyright": "© {currentYear} PR TEC Academy. All rights reserved. Designed with ❤️ for ambitious programmers.",
+    "quickLinks": "Quick Links",
+    "programs": "Programs",
+    "support": "Support",
+    "legal": "Legal",
+    "privacy": "Privacy Policy",
+    "terms": "Terms of Service",
+    "faq": "FAQ",
+    "help": "Help Center",
+    "allRightsReserved": "All rights reserved."
+  },
+  "common": {
+    "loading": "Loading...",
+    "error": "An error occurred",
+    "success": "Success!",
+    "cancel": "Cancel",
+    "confirm": "Confirm",
+    "save": "Save",
+    "edit": "Edit",
+    "delete": "Delete",
+    "close": "Close",
+    "next": "Next",
+    "previous": "Previous",
+    "search": "Search",
+    "filter": "Filter",
+    "sort": "Sort",
+    "language": "Language",
+    "theme": "Theme",
+    "settings": "Settings"
+  },
+  "children": {
+    "title": "Coding for Kids",
+    "subtitle": "Fun and Interactive Programming Courses for Children",
+    "description": "Introduce your children to the world of programming with our specially designed courses that make learning fun and engaging.",
+    "ageGroups": "Age Groups",
+    "beginners": "Beginners (6-8 years)",
+    "intermediate": "Intermediate (9-12 years)",
+    "advanced": "Advanced (13-16 years)"
+  },
+  "whatsapp": {
+    "message": "Hello! I'm interested in learning more about PR TEC Academy courses. Can you help me?",
+    "courseMessage": "Hi! I'd like to know more about the {{courseName}} course. Can you provide more details?"
+  },
+  "courses": {
+    "flutter": {
+      "title": "Flutter App Development",
+      "description": "Learn how to build exceptional, high-performance apps for Android and iOS using Flutter and Dart.",
+      "level": "Beginner to Advanced",
+      "duration": "5 months",
+      "students": "150+",
+      "originalPrice": 5000,
+      "discountedPrice": 4500,
+      "features": [
+        "Dart fundamentals & Object-Oriented Programming",
+        "Flutter widgets, layouts, and responsive UI patterns",
+        "State management (Provider, Bloc, Riverpod) and Clean Architecture",
+        "REST API integration (Dio/HTTP), error handling, and caching",
+        "Firebase suite: Auth, Firestore, Storage, Cloud Functions, FCM",
+        "Supabase integration (auth, storage, realtime databases)",
+        "Payment gateways (Stripe, Paymob, etc.) and in-app purchases",
+        "Deploying to Play Store & App Store, versioning, and CI/CD basics",
+        "Using AI tools to speed up development and boost your project portfolio"
+      ]
+    },
+    "frontend": {
+      "title": "Frontend Web Development",
+      "description": "Master the skills to create interactive and modern websites using the latest technologies.",
+      "level": "Beginner to Intermediate",
+      "duration": "4 months",
+      "students": "200+",
+      "originalPrice": 5000,
+      "discountedPrice": 4000,
+      "features": [
+        "HTML5 semantic structure & accessibility basics",
+        "CSS3, responsive design, Flexbox/Grid, and Tailwind CSS",
+        "Modern JavaScript (ES6+), DOM manipulation, and async patterns",
+        "React fundamentals, Hooks, and React Router for SPA navigation",
+        "State management (Context API, Redux Toolkit) and global stores",
+        "API integration (Axios/Fetch), error handling, and data caching",
+        "Tooling & bundlers (Vite/Webpack) and environment variables",
+        "Testing with Jest & React Testing Library and deployment (Vercel/Netlify)",
+        "Using AI to accelerate UI development, prototyping, and debugging"
+      ]
+    },
+    "python": {
+      "title": "Python Backend Development",
+      "description": "Build powerful server systems using Python, Django, and modern databases.",
+      "level": "Intermediate to Advanced",
+      "duration": "4 months",
+      "students": "90+",
+      "originalPrice": 5500,
+      "discountedPrice": 5000,
+      "features": [
+        "Python syntax, OOP, virtual environments, and best practices",
+        "Django MVC pattern, templates, and ORM fundamentals",
+        "Django REST Framework (DRF) for building secure RESTful APIs",
+        "PostgreSQL integration, migrations, and advanced queries",
+        "Authentication & authorization (JWT/OAuth), permissions, and throttling",
+        "Task queues & scheduling with Celery and Redis",
+        "Dockerizing your backend and deploying to cloud platforms (Heroku/AWS)",
+        "Automated testing (pytest) and CI/CD pipelines",
+        "Leveraging AI for code generation, documentation, and backend automation"
+      ]
+    },
+    "csharp": {
+      "title": "C# Backend Development",
+      "description": "Develop applications and APIs using .NET Core and Microsoft technologies.",
+      "level": "Intermediate to Advanced",
+      "duration": "4 months",
+      "students": "75+",
+      "originalPrice": 5500,
+      "discountedPrice": 5000,
+      "features": [
+        "C# fundamentals, OOP, and .NET runtime essentials",
+        "ASP.NET Core MVC and building RESTful Web APIs",
+        "Entity Framework Core, LINQ, and database migrations",
+        "SQL Server integration, schema design, and stored procedures",
+        "Authentication & authorization with Identity and JWT tokens",
+        "Dependency Injection, Clean Architecture, and SOLID principles",
+        "Docker containers, Azure deployment, and IIS hosting basics",
+        "Logging, monitoring, and debugging production issues",
+        "AI integration (Azure Cognitive Services, OpenAI APIs) to enhance your apps"
+      ]
+    },
+    "basics": {
+      "title": "Programming Fundamentals",
+      "description": "Build a strong foundation in programming using C++ and computer science concepts.",
+      "level": "Beginner",
+      "duration": "4 months",
+      "students": "300+",
+      "originalPrice": 4500,
+      "discountedPrice": 4000,
+      "features": [
+        "C++ syntax, variables, data types, and standard input/output",
+        "Control flow (conditions, loops) and error handling basics",
+        "Functions, modularization, and Object-Oriented Programming concepts",
+        "Data structures (Arrays, Linked Lists, Stacks, Queues, Trees)",
+        "Algorithms (sorting, searching, recursion) and complexity analysis",
+        "Debugging strategies, IDE usage, and code optimization tips",
+        "Introduction to databases (SQL basics and ERD diagrams)",
+        "Version control with Git/GitHub and collaborative workflows",
+        "How to leverage AI tools to practice, debug, and improve your solutions"
+      ]
+    },
+    "kids": {
+      "title": "Kids Programming",
+      "description": "An interactive programming journey for kids using Scratch and simplified Python.",
+      "level": "Ages 8 to 14",
+      "duration": "5 months",
+      "students": "100+",
+      "originalPrice": 7000,
+      "discountedPrice": 6000,
+      "features": [
+        "Scratch basics: drag-and-drop coding and game logic for kids",
+        "Designing simple games and interactive stories",
+        "Intro to Python through fun mini-projects and visual examples",
+        "Logical thinking, problem-solving, and algorithmic reasoning",
+        "Creative challenges and weekly hands-on activities",
+        "Teamwork, communication, and presenting project ideas",
+        "Safe internet practices and digital citizenship",
+        "Showcasing projects to parents and earning badges/rewards",
+        "Simple AI concepts to inspire creativity and curiosity"
+      ]
+    },
+    "currency": "EGP",
+    "enrollButton": "Enroll via WhatsApp"
+  },
+  "contact": {
+    "title": "Contact Us",
+    "subtitle": "Get in touch with our team",
+    "form": {
+      "name": "Full Name",
+      "email": "Email Address",
+      "phone": "Phone Number",
+      "course": "Interested Course",
+      "message": "Your Message",
+      "submit": "Send Message",
+      "success": "Message sent successfully!",
+      "error": "Failed to send message. Please try again."
+    },
+    "info": {
+      "hours": {
+        "title": "Working Hours",
+        "details": ["Saturday - Thursday: 9 AM - 8 PM"],
+        "action": "Call Now"
+      }
+    },
+    "quickActions": {
+      "trial": {
+        "title": "Book a Trial Session",
+        "description": "Experience our teaching method yourself",
+        "badge": "Free"
+      },
+      "consultant": {
+        "title": "Talk to a Consultant",
+        "description": "Get personalized course recommendations",
+        "badge": "Online"
+      },
+      "visit": {
+        "title": "Visit Our Center",
+        "description": "See our facilities and meet the team",
+        "badge": "In-person"
+      }
+    }
+  },
+  "testimonials": {
+    "title": "Success Stories",
+    "subtitle": "What our students say about us",
+    "students": [
+      {
+        "name": "Sarah Abdullah",
+        "role": "Web Designer at a Major Company",
+        "course": "Frontend Web Development",
+        "testimonial": "Honestly, I didn't know anything about programming and always felt the field was too difficult for me. When I started the course with PR TEC, everything changed. The explanation was very simple, and each lesson had practical application. After finishing the course, I was able to work at a good company, and I'm very proud of myself.",
+        "outcome": "Got hired 3 months after the course"
+      },
+      {
+        "name": "Mohamed Kamal",
+        "role": "Freelance App Developer",
+        "course": "Flutter Development",
+        "testimonial": "I was working in a job completely unrelated to technology and wanted to learn something with a future. I joined the Flutter course knowing nothing, but the way they teach made me love the field. Now I work freelance and create apps for people from home!",
+        "outcome": "Built 3 apps and became a freelancer"
+      },
+      {
+        "name": "Ahmed Fawzy",
+        "role": "Full-Stack Developer",
+        "course": "Backend Development",
+        "testimonial": "This course literally changed my life. I thought Python and Django were difficult, but the curriculum was organized and the instructor knew what he was doing. They also helped me fix my CV and apply for jobs. Thank God, now my salary has increased and there are more opportunities.",
+        "outcome": "Salary increased 3x after the course"
+      },
+      {
+        "name": "Kareem Yasser",
+        "role": "12-year-old Student",
+        "course": "Kids Programming",
+        "testimonial": "I used to love games, but now I make games myself! The course is very fun, and I looked forward to the class every week. I made more than one game and showed them to my friends, and they were all amazed. I want to grow up and work as a game developer.",
+        "outcome": "Created 5 games and now learning Python"
+      },
+      {
+        "name": "Mai Khaled",
+        "role": "Changed Career Path",
+        "course": "Programming Fundamentals",
+        "testimonial": "I'm 35 years old and thought I had missed the programming train. But when I started with PR TEC, I felt I was in an encouraging environment, and the instructor never delayed answering any question. Now I understand how to write code and thought about continuing and specializing.",
+        "outcome": "Switched from teaching to programming"
+      },
+      {
+        "name": "Sherif Hassan",
+        "role": "Startup Founder",
+        "course": "Full-Stack Package",
+        "testimonial": "I needed to create a first version of my app quickly, and I found nothing better than PR TEC. The courses are intensive and practical, and everything I need is available. It saved me a lot of time and I built the project myself.",
+        "outcome": "Founded his company and raised $500K funding"
+      }
+    ]
+  },
+  "children": {
+    "title": "Programming Education for Children",
+    "subtitle": "We offer programming courses for children from age 6 to 16, in a simple and fun way, suitable for each age group.",
+    "ageGroups": [
+      {
+        "age": "Ages 6 to 8",
+        "title": "Little Programmer",
+        "description": "A simplified introduction to programming concepts in a fun way",
+        "features": ["Scratch Jr.", "Basic Logic", "Simple Animations", "Interactive Stories"]
+      },
+      {
+        "age": "Ages 9 to 12",
+        "title": "Future Developer",
+        "description": "Programming games and simple applications using Scratch and Python",
+        "features": ["Scratch", "Game Programming", "Python Basics", "Problem Solving"]
+      },
+      {
+        "age": "Ages 13 to 16",
+        "title": "Young Programmer",
+        "description": "Advanced programming projects and introduction to web and app development",
+        "features": ["Python Projects", "Web Development", "Mobile Apps", "Portfolio Building"]
+      }
+    ],
+    "cta": {
+      "title": "Start Your Child's Programming Journey",
+      "description": "Give your child the opportunity to learn the language of the future in a fun and interactive environment.",
+      "button": "Book a Free Trial Session"
+    }
+  },
+  "seo": {
+    "title": "Learn Programming at PR TEC Academy – Flutter, Web, Backend & More",
+    "description": "PR TEC Academy is Iraq's leading programming education platform. Learn Flutter development, web development, backend programming, and coding for kids with expert instructors and hands-on projects.",
+    "keywords": "PR TEC Academy, programming courses, learn programming, Flutter development, web development, backend development, programming for kids, coding bootcamp, Iraq programming academy, best programming academy, تعلم البرمجة, أكاديمية تعليم البرمجة",
+    "pages": {
+      "home": {
+        "title": "PR TEC Academy - Best Programming Courses in Iraq",
+        "description": "Start your programming journey with PR TEC Academy. Expert-led courses in Flutter, Web Development, Backend, and Kids Programming. Join thousands of successful graduates."
+      },
+      "courses": {
+        "title": "Programming Courses - Flutter, Web & Backend | PR TEC Academy",
+        "description": "Explore our comprehensive programming courses: Flutter app development, frontend & backend web development, and programming basics for all skill levels."
+      },
+      "about": {
+        "title": "About PR TEC Academy - Leading Programming Education in Iraq",
+        "description": "Learn about PR TEC Academy's mission to provide world-class programming education. Discover our teaching methodology, expert instructors, and success stories."
+      },
+      "contact": {
+        "title": "Contact PR TEC Academy - Get Started Today",
+        "description": "Contact PR TEC Academy to start your programming journey. Book a free trial lesson, speak with our consultants, or visit our center in Baghdad."
+      }
+    }
+  }
+}

@@ -68,7 +68,7 @@ const StarsBackground: React.FC<StarsBackgroundProps> = ({
         // Canvas can't use CSS variables directly, so we need to use actual color values
         let starFillColor;
         let starShadowColor;
-        if (starColor.includes('--primary')) {
+        if (starColor.includes('--primary')) { 
           starFillColor = `rgba(124, 58, 237, ${star.brightness})`; // Purple color similar to primary
           starShadowColor = 'rgba(124, 58, 237, 0.7)'; // Purple shadow
         } else if (starColor.includes('--accent')) {
