@@ -3,13 +3,81 @@
   <head>
     <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    
+    <!-- Primary Meta Tags -->
+    <title>PR TEC Academy - Learn Programming Online | Best Programming Courses</title>
+    <meta name="title" content="PR TEC Academy - Learn Programming Online | Best Programming Courses" />
+    <meta name="description" content="PR TEC Academy is Iraq's leading programming education platform. Learn Flutter development, web development, backend programming, and coding for kids with expert instructors." />
+    <meta name="keywords" content="PR TEC Academy, programming courses, learn programming, Flutter development, web development, backend development, programming for kids, coding bootcamp, Iraq programming academy, best programming academy, تعلم البرمجة, أكاديمية تعليم البرمجة" />
+    <meta name="author" content="PR TEC Academy" />
+    <meta name="robots" content="index, follow" />
+    <meta name="language" content="English" />
+    <meta name="revisit-after" content="7 days" />
+    
+    <!-- Open Graph / Facebook -->
+    <meta property="og:type" content="website" />
+    <meta property="og:url" content="https://pr-tec-codeverse.vercel.app/" />
+    <meta property="og:title" content="PR TEC Academy - Learn Programming Online | Best Programming Courses" />
+    <meta property="og:description" content="PR TEC Academy is Iraq's leading programming education platform. Learn Flutter development, web development, backend programming, and coding for kids with expert instructors." />
+    <meta property="og:image" content="https://pr-tec-codeverse.vercel.app/placeholder.svg" />
+    <meta property="og:site_name" content="PR TEC Academy" />
+    <meta property="og:locale" content="en_US" />
+    <meta property="og:locale:alternate" content="ar_IQ" />
+    
+    <!-- Twitter -->
+    <meta property="twitter:card" content="summary_large_image" />
+    <meta property="twitter:url" content="https://pr-tec-codeverse.vercel.app/" />
+    <meta property="twitter:title" content="PR TEC Academy - Learn Programming Online | Best Programming Courses" />
+    <meta property="twitter:description" content="PR TEC Academy is Iraq's leading programming education platform. Learn Flutter development, web development, backend programming, and coding for kids with expert instructors." />
+    <meta property="twitter:image" content="https://pr-tec-codeverse.vercel.app/placeholder.svg" />
+    <meta name="twitter:site" content="@prtecacademy" />
+    
+    <!-- Canonical URL -->
+    <link rel="canonical" href="https://pr-tec-codeverse.vercel.app/" />
+    
+    <!-- Alternate languages -->
+    <link rel="alternate" hreflang="en" href="https://pr-tec-codeverse.vercel.app/en/" />
+    <link rel="alternate" hreflang="ar" href="https://pr-tec-codeverse.vercel.app/ar/" />
+    <link rel="alternate" hreflang="x-default" href="https://pr-tec-codeverse.vercel.app/" />
+    
+    <!-- Favicon and Icons -->
+    <link rel="icon" type="image/svg+xml" href="/vite.svg" />
+    <link rel="apple-touch-icon" href="/vite.svg" />
+    
+    <!-- Structured Data -->
+    <script type="application/ld+json" src="/structured-data.json"></script>
+    
+    <!-- PWA Manifest -->
+    <link rel="manifest" href="/manifest.json" />
+    
+    <!-- Humans.txt -->
+    <link rel="author" href="/humans.txt" />
+    
+    <!-- Theme and Mobile -->
+    <meta name="theme-color" content="#1a1a1a" />
+    <meta name="mobile-web-app-capable" content="yes" />
+    <meta name="apple-mobile-web-app-capable" content="yes" />
+    <meta name="apple-mobile-web-app-status-bar-style" content="default" />
+    
     <!-- Dynamic meta tags will be managed by react-helmet-async -->
-    <title>PR TEC Academy</title>
-    <link rel="icon" type="image/svg+xml" href="/favicon.svg" />
   </head>
-
   <body>
     <div id="root"></div>
     <script type="module" src="/src/main.tsx"></script>
+    
+    <!-- Service Worker Registration -->
+    <script>
+      if ('serviceWorker' in navigator) {
+        window.addEventListener('load', () => {
+          navigator.serviceWorker.register('/sw.js')
+            .then((registration) => {
+              console.log('SW registered: ', registration);
+            })
+            .catch((registrationError) => {
+              console.log('SW registration failed: ', registrationError);
+            });
+        });
+      }
+    </script>
   </body>
 </html>

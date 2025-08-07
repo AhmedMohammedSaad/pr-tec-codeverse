@@ -1,0 +1,55 @@
+/* TEAM */
+
+Developer: PR TEC Academy Development Team
+Contact: info@pr-tec-academy.com
+Twitter: @prtecacademy
+From: Baghdad, Iraq
+
+/* THANKS */
+
+React Team: For the amazing React framework
+Vite Team: For the fast build tool
+Tailwind CSS: For the utility-first CSS framework
+Vercel: For the hosting platform
+
+/* SITE */
+
+Last update: 2024/12/19
+Language: English / Arabic
+Doctype: HTML5
+IDE: Visual Studio Code, Trae AI
+Components: React, TypeScript, Tailwind CSS, Vite
+Hosting: Vercel
+
+/* MISSION */
+
+PR TEC Academy is dedicated to providing high-quality programming education
+to students in Iraq and the Middle East. We believe in making technology
+education accessible, practical, and engaging for learners of all ages.
+
+Our courses cover:
+- Flutter Development
+- Web Development
+- Backend Programming
+- Programming for Kids
+- Software Engineering Fundamentals
+
+We are committed to:
+- Excellence in education
+- Practical, hands-on learning
+- Supporting the local tech community
+- Building the next generation of developers
+
+/* CONTACT */
+
+Website: https://pr-tec-codeverse.vercel.app
+Email: info@pr-tec-academy.com
+Phone: +964-XXX-XXX-XXXX
+Address: Baghdad, Iraq
+
+Social Media:
+Facebook: /prtecacademy
+Twitter: @prtecacademy
+Instagram: @prtecacademy
+LinkedIn: /company/prtecacademy
+YouTube: /c/prtecacademy

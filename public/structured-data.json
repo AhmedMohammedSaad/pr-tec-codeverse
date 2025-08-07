@@ -1,0 +1,139 @@
+{
+  "@context": "https://schema.org",
+  "@graph": [
+    {
+      "@type": "EducationalOrganization",
+      "@id": "https://pr-tec-codeverse.vercel.app/#organization",
+      "name": "PR TEC Academy",
+      "alternateName": "أكاديمية PR TEC",
+      "url": "https://pr-tec-codeverse.vercel.app",
+      "logo": {
+        "@type": "ImageObject",
+        "url": "https://pr-tec-codeverse.vercel.app/placeholder.svg",
+        "width": 200,
+        "height": 200
+      },
+      "description": "PR TEC Academy is Iraq's leading programming education platform offering comprehensive courses in Flutter development, web development, backend programming, and coding for kids.",
+      "foundingDate": "2020",
+      "numberOfEmployees": "10-50",
+      "slogan": "Master Programming, Shape Your Future",
+      "address": {
+        "@type": "PostalAddress",
+        "addressCountry": "IQ",
+        "addressLocality": "Baghdad",
+        "addressRegion": "Baghdad Governorate"
+      },
+      "contactPoint": {
+        "@type": "ContactPoint",
+        "telephone": "+964-XXX-XXX-XXXX",
+        "contactType": "customer service",
+        "availableLanguage": ["English", "Arabic"],
+        "areaServed": "IQ"
+      },
+      "sameAs": [
+        "https://facebook.com/prtecacademy",
+        "https://twitter.com/prtecacademy",
+        "https://instagram.com/prtecacademy",
+        "https://linkedin.com/company/prtecacademy",
+        "https://youtube.com/c/prtecacademy"
+      ],
+      "areaServed": {
+        "@type": "Country",
+        "name": "Iraq"
+      },
+      "knowsAbout": [
+        "Flutter Development",
+        "Web Development",
+        "Backend Programming",
+        "Mobile App Development",
+        "Programming for Kids",
+        "Software Engineering",
+        "Computer Science Education",
+        "JavaScript",
+        "Python",
+        "React",
+        "Node.js",
+        "Database Management",
+        "API Development"
+      ]
+    },
+    {
+      "@type": "Course",
+      "@id": "https://pr-tec-codeverse.vercel.app/#flutter-course",
+      "name": "Flutter Development Course",
+      "description": "Comprehensive Flutter development course covering mobile app development for iOS and Android platforms",
+      "provider": {
+        "@id": "https://pr-tec-codeverse.vercel.app/#organization"
+      },
+      "courseMode": "online",
+      "inLanguage": ["ar", "en"],
+      "teaches": [
+        "Flutter Framework",
+        "Dart Programming Language",
+        "Mobile App Development",
+        "Cross-platform Development",
+        "State Management",
+        "Firebase Integration"
+      ]
+    },
+    {
+      "@type": "Course",
+      "@id": "https://pr-tec-codeverse.vercel.app/#web-development-course",
+      "name": "Web Development Bootcamp",
+      "description": "Full-stack web development course covering frontend and backend technologies",
+      "provider": {
+        "@id": "https://pr-tec-codeverse.vercel.app/#organization"
+      },
+      "courseMode": "online",
+      "inLanguage": ["ar", "en"],
+      "teaches": [
+        "HTML5",
+        "CSS3",
+        "JavaScript",
+        "React",
+        "Node.js",
+        "Database Management",
+        "API Development",
+        "Responsive Design"
+      ]
+    },
+    {
+      "@type": "Course",
+      "@id": "https://pr-tec-codeverse.vercel.app/#kids-programming-course",
+      "name": "Programming for Kids",
+      "description": "Introduction to programming concepts designed specifically for children",
+      "provider": {
+        "@id": "https://pr-tec-codeverse.vercel.app/#organization"
+      },
+      "courseMode": "online",
+      "inLanguage": ["ar", "en"],
+      "audience": {
+        "@type": "EducationalAudience",
+        "educationalRole": "student",
+        "audienceType": "children"
+      },
+      "teaches": [
+        "Basic Programming Concepts",
+        "Logic and Problem Solving",
+        "Scratch Programming",
+        "Game Development Basics"
+      ]
+    },
+    {
+      "@type": "WebSite",
+      "@id": "https://pr-tec-codeverse.vercel.app/#website",
+      "url": "https://pr-tec-codeverse.vercel.app",
+      "name": "PR TEC Academy",
+      "description": "Learn programming online with Iraq's leading programming education platform",
+      "publisher": {
+        "@id": "https://pr-tec-codeverse.vercel.app/#organization"
+      },
+      "inLanguage": ["en", "ar"],
+      "potentialAction": {
+        "@type": "SearchAction",
+        "target": "https://pr-tec-codeverse.vercel.app/search?q={search_term_string}",
+        "query-input": "required name=search_term_string"
+      }
+    }
+  ]
+}

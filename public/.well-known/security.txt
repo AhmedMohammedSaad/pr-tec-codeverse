@@ -1,0 +1,9 @@
+Contact: mailto:security@pr-tec-academy.com
+Contact: https://pr-tec-codeverse.vercel.app/contact
+Expires: 2025-12-31T23:59:59.000Z
+Encryption: https://pr-tec-codeverse.vercel.app/pgp-key.txt
+Acknowledgments: https://pr-tec-codeverse.vercel.app/security-acknowledgments
+Preferred-Languages: en, ar
+Canonical: https://pr-tec-codeverse.vercel.app/.well-known/security.txt
+Policy: https://pr-tec-codeverse.vercel.app/security-policy
+Hiring: https://pr-tec-codeverse.vercel.app/careers

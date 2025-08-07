@@ -38,30 +38,78 @@ const SEO = ({
     "@context": "https://schema.org",
     "@type": "EducationalOrganization",
     "name": "PR TEC Academy",
-    "alternateName": currentLang === 'ar' ? "أكاديمية بي آر تك" : "PR TEC Academy",
-    "url": "https://prtecacademy.com",
-    "logo": "https://prtecacademy.com/logo.png",
+    "alternateName": "أكاديمية PR TEC",
+    "url": "https://pr-tec-codeverse.vercel.app",
+    "logo": "https://pr-tec-codeverse.vercel.app/placeholder.svg",
     "description": finalDescription,
     "address": {
       "@type": "PostalAddress",
       "addressCountry": "IQ",
-      "addressLocality": "Baghdad"
+      "addressLocality": "Baghdad",
+      "addressRegion": "Baghdad Governorate"
     },
     "contactPoint": {
       "@type": "ContactPoint",
       "telephone": "+964-XXX-XXX-XXXX",
       "contactType": "customer service",
-      "availableLanguage": ["Arabic", "English"]
+      "availableLanguage": ["English", "Arabic"],
+      "areaServed": "IQ"
     },
     "sameAs": [
       "https://facebook.com/prtecacademy",
+      "https://twitter.com/prtecacademy",
       "https://instagram.com/prtecacademy",
-      "https://linkedin.com/company/prtecacademy"
+      "https://linkedin.com/company/prtecacademy",
+      "https://youtube.com/c/prtecacademy"
     ],
-    "offers": {
-      "@type": "Offer",
-      "category": "Programming Courses",
-      "description": currentLang === 'ar' ? "دورات البرمجة للجميع" : "Programming courses for everyone"
+    "foundingDate": "2020",
+    "numberOfEmployees": "10-50",
+    "slogan": "Master Programming, Shape Your Future",
+    "knowsAbout": [
+      "Flutter Development",
+      "Web Development",
+      "Backend Programming",
+      "Mobile App Development",
+      "Programming for Kids",
+      "Software Engineering",
+      "Computer Science Education"
+    ],
+    "areaServed": {
+      "@type": "Country",
+      "name": "Iraq"
+    },
+    "hasOfferCatalog": {
+      "@type": "OfferCatalog",
+      "name": "Programming Courses",
+      "itemListElement": [
+        {
+          "@type": "Course",
+          "name": "Flutter Development Course",
+          "description": "Learn to build cross-platform mobile applications with Flutter",
+          "provider": {
+            "@type": "EducationalOrganization",
+            "name": "PR TEC Academy"
+          }
+        },
+        {
+          "@type": "Course",
+          "name": "Web Development Bootcamp",
+          "description": "Master frontend and backend web development technologies",
+          "provider": {
+            "@type": "EducationalOrganization",
+            "name": "PR TEC Academy"
+          }
+        },
+        {
+          "@type": "Course",
+          "name": "Programming for Kids",
+          "description": "Introduction to programming concepts for children",
+          "provider": {
+            "@type": "EducationalOrganization",
+            "name": "PR TEC Academy"
+          }
+        }
+      ]
     }
   };
   

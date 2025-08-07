@@ -1,8 +1,13 @@
+# Robots.txt for PR TEC Academy
+# Allow all search engines to crawl the site
+
 User-agent: Googlebot
 Allow: /
+Crawl-delay: 1
 
 User-agent: Bingbot
 Allow: /
+Crawl-delay: 1
 
 User-agent: Twitterbot
 Allow: /
@@ -12,3 +17,11 @@ Allow: /
 
 User-agent: *
 Allow: /
+Crawl-delay: 2
+
+# Disallow admin or private areas (if any)
+# Disallow: /admin/
+# Disallow: /private/
+
+# Sitemap location
+Sitemap: https://pr-tec-codeverse.vercel.app/sitemap.xml
