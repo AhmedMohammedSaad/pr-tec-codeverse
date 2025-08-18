@@ -32,7 +32,7 @@ const Hero = () => {
     <section
       id="home"
       dir="rtl"
-      className="relative min-h-screen flex items-center justify-center overflow-hidden"
+      className="relative min-h-screen flex items-center justify-center overflow-hidden pt-16 sm:pt-0"
     >
       {/* خلفية */}
       <div className="absolute inset-0 z-0">
@@ -53,7 +53,7 @@ const Hero = () => {
       </div>
 
       {/* المحتوى */}
-      <div className="relative z-20 max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 text-center">
+      <div className="relative z-20 max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 text-center pt-16 sm:pt-20">
         {/* أنيميشن للعنوان */}
         <motion.div
           className="relative"
@@ -62,7 +62,7 @@ const Hero = () => {
           transition={{ duration: 0.5 }}
         >
           <div
-            className="absolute -top-20 -right-20 w-40 h-40 opacity-15 blur-3xl rounded-full"
+            className="absolute -top-20 -right-20 w-40 h-40 opacity-15 blur-3xl rounded-full hidden sm:block"
             style={{ background: 'radial-gradient(circle, hsl(var(--primary)) 0%, transparent 70%)' }}
           />
           
@@ -70,20 +70,20 @@ const Hero = () => {
             initial={{ opacity: 0, rotateX: 90, scale: 0.9 }}
             animate={{ opacity: 1, rotateX: 0, scale: 1 }}
             transition={{ duration: 1.4, ease: "easeOut" }}
-            className="text-4xl md:text-6xl lg:text-7xl font-bold mb-6 relative"
+            className="text-3xl sm:text-4xl md:text-6xl lg:text-7xl font-bold mb-6 relative leading-tight"
           >
             <span 
-              className="inline-block absolute -top-10 -right-10 text-primary opacity-60"
+              className="inline-block absolute -top-6 sm:-top-10 -right-6 sm:-right-10 text-primary opacity-60"
             >
-              <Sparkles size={40} />
+              <Sparkles size={24} className="sm:w-10 sm:h-10" />
             </span>
             
-            <span className="block mb-2">
+            <span className="block mb-2 px-2">
               {t('hero.title')}
             </span>
 
             <motion.span
-              className="text-2xl md:text-4xl tracking-wider block mt-4"
+              className="text-xl sm:text-2xl md:text-4xl tracking-wider block mt-4 px-2"
               initial={{ opacity: 0, y: 40 }}
               animate={{ opacity: 1, y: 0 }}
               transition={{ delay: 1.8, duration: 0.8 }}
