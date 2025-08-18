@@ -314,6 +314,28 @@ All colors MUST be HSL.
     font-feature-settings: "liga" 1, "kern" 1;
   }
 
+  /* RTL Navigation improvements */
+  .rtl nav {
+    min-height: 4rem;
+  }
+
+  .rtl nav .flex {
+    flex-wrap: nowrap;
+  }
+
+  /* Ensure navigation items don't wrap */
+  .rtl nav a {
+    white-space: nowrap;
+    font-size: 0.875rem;
+  }
+
+  /* Better spacing for Arabic navigation */
+  .rtl .space-x-6 > :not([hidden]) ~ :not([hidden]) {
+    --tw-space-x-reverse: 1;
+    margin-right: calc(1.5rem * var(--tw-space-x-reverse));
+    margin-left: calc(1.5rem * calc(1 - var(--tw-space-x-reverse)));
+  }
+
   /* RTL dropdown menu adjustments */
   .rtl [data-radix-popper-content-wrapper] {
     transform-origin: right center;
@@ -338,40 +360,14 @@ All colors MUST be HSL.
     text-align: right;
   }
 
-  /* Performance optimizations */
-  * {
-    will-change: auto;
-  }
-
-  .motion-element {
-    will-change: transform, opacity;
-    backface-visibility: hidden;
-    transform-style: preserve-3d;
-  }
-
-  /* Reduce motion for users who prefer it */
-  @media (prefers-reduced-motion: reduce) {
-    *,
-    *::before,
-    *::after {
-      animation-duration: 0.01ms !important;
-      animation-iteration-count: 1 !important;
-      transition-duration: 0.01ms !important;
-      scroll-behavior: auto !important;
-    }
-  }
-
-  /* GPU acceleration for smooth animations */
-  .gpu-accelerated {
-    transform: translateZ(0);
-    will-change: transform;
-  }
-
-  /* Optimize images */
-  img {
-    content-visibility: auto;
-    contain-intrinsic-size: 300px 200px;
-  }
+  /* Utilities */
+  /* Hide global page scrollbar but keep scrolling */
+  body::-webkit-scrollbar { display: none; }
+  body { -ms-overflow-style: none; scrollbar-width: none; }
+  
+  /* Utility to match existing "scrollbar-none" usage */
+  .scrollbar-none::-webkit-scrollbar { display: none; }
+  .scrollbar-none { -ms-overflow-style: none; scrollbar-width: none; }
 
   .rtl th:last-child,
   .rtl td:last-child {

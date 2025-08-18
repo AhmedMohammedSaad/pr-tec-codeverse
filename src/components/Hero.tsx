@@ -1,6 +1,5 @@
 import { motion, useMotionValue, useTransform, animate } from "framer-motion";
-import { Button } from "@/components/ui/button";
-import { Code2, Zap, ChevronDown, Sparkles } from "lucide-react";
+import { Code2, ChevronDown, Sparkles } from "lucide-react";
 import heroImage from "@/assets/hero-coding.jpg";
 import { useState, useEffect } from "react";
 import { useTranslation } from "react-i18next";
@@ -139,47 +138,6 @@ const Hero = () => {
               {t('hero.description3')}
             </motion.span>
           </motion.p>
-        </motion.div>
-        
-        {/* أزرار الدعوة للعمل */}
-        <motion.div
-          className="flex flex-col sm:flex-row gap-4 justify-center mb-16"
-          initial={{ opacity: 0, y: 30 }}
-          animate={{ opacity: 1, y: 0 }}
-          transition={{ delay: 3.2, duration: 0.8 }}
-        >
-          <motion.div
-            whileHover={{ scale: 1.05 }}
-            whileTap={{ scale: 0.95 }}
-          >
-            <Button 
-              size="lg" 
-              className="btn-glow px-8 py-4 text-lg font-semibold bg-gradient-to-r from-primary to-accent hover:from-primary/90 hover:to-accent/90 shadow-lg"
-              onClick={() => {
-                document.getElementById('courses')?.scrollIntoView({ behavior: 'smooth' });
-              }}
-            >
-              <Code2 className="ml-2 h-5 w-5" />
-              {t('hero.cta.browseCourses')}
-            </Button>
-          </motion.div>
-          
-          <motion.div
-            whileHover={{ scale: 1.05 }}
-            whileTap={{ scale: 0.95 }}
-          >
-            <Button 
-              size="lg" 
-              variant="outline" 
-              className="px-8 py-4 text-lg font-semibold border-2 border-primary/50 hover:border-primary hover:bg-primary/10 backdrop-blur-sm"
-              onClick={() => {
-                document.getElementById('contact')?.scrollIntoView({ behavior: 'smooth' });
-              }}
-            >
-              <Zap className="ml-2 h-5 w-5" />
-              {t('hero.cta.startFree')}
-            </Button>
-          </motion.div>
         </motion.div>
         
         {/* الإحصائيات */}

@@ -14,7 +14,6 @@ const Navigation = () => {
     { name: t('navigation.about'), href: "#about" },
     { name: t('navigation.courses'), href: "#courses" },
     { name: t('navigation.children'), href: "#children" },
-    { name: t('navigation.testimonials'), href: "#testimonials" },
     { name: t('navigation.contact'), href: "#contact" },
   ];
 
@@ -25,7 +24,7 @@ const Navigation = () => {
       <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
         <div className="flex justify-between items-center h-16">
           {/* Logo */}
-          <div className={`flex items-center ${isRTL ? 'space-x-reverse space-x-2' : 'space-x-2'}`}>
+          <div className={`flex items-center shrink-0 ${isRTL ? 'space-x-reverse space-x-2' : 'space-x-2'}`}>
             <div className="relative">
               <Code className="h-8 w-8 text-primary" />
               <Sparkles className={`h-4 w-4 text-accent absolute -top-1 ${isRTL ? '-left-1' : '-right-1'}`} />
@@ -35,23 +34,27 @@ const Navigation = () => {
             </span>
           </div>
 
-          {/* Desktop Navigation */}
-          <div className={`hidden md:flex items-center ${isRTL ? 'space-x-reverse space-x-8' : 'space-x-8'}`}>
+          {/* Desktop Navigation - Center links */}
+          <div className={`hidden lg:flex items-center flex-1 justify-center overflow-x-auto no-scrollbar ${isRTL ? 'space-x-reverse space-x-6' : 'space-x-6'}`}>
             {navItems.map((item) => (
               <a
                 key={item.name}
                 href={item.href}
-                className="text-foreground hover:text-primary transition-colors duration-300 relative group"
+                className="text-foreground hover:text-primary transition-colors duration-300 relative group whitespace-nowrap text-sm font-medium"
               >
                 {item.name}
                 <span className={`absolute -bottom-1 ${isRTL ? 'left-0' : 'right-0'} w-0 h-0.5 bg-primary transition-all duration-300 group-hover:w-full`}></span>
               </a>
             ))}
-            <LanguageSwitcher />
+          </div>
+
+          {/* Desktop Right Controls */}
+          <div className="hidden lg:flex items-center shrink-0">
+            <LanguageSwitcher compact className="shrink-0" />
           </div>
 
           {/* Mobile Menu Button */}
-          <div className="md:hidden flex items-center gap-2">
+          <div className="lg:hidden flex items-center gap-2" dir={isRTL ? 'rtl' : 'ltr'}>
             <LanguageSwitcher size="sm" />
             <Button
               variant="ghost"
@@ -65,13 +68,13 @@ const Navigation = () => {
 
         {/* Mobile Menu */}
         {isOpen && (
-          <div className="md:hidden">
+          <div className="lg:hidden">
             <div className="px-2 pt-2 pb-3 space-y-1 sm:px-3 bg-card/95 backdrop-blur-lg rounded-lg mt-2 border border-border">
               {navItems.map((item) => (
                 <a
                   key={item.name}
                   href={item.href}
-                  className="block px-3 py-2 text-foreground hover:text-primary transition-colors duration-300"
+                  className={`block px-3 py-2 text-foreground hover:text-primary transition-colors duration-300 ${isRTL ? 'text-right' : 'text-left'}`}
                   onClick={() => setIsOpen(false)}
                 >
                   {item.name}

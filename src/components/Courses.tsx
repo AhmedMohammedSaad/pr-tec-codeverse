@@ -13,6 +13,8 @@ import {
 } from "@/components/ui/card";
 import { Badge } from "@/components/ui/badge";
 import { Button } from "@/components/ui/button";
+import { useNavigate } from "react-router-dom";
+import { useTranslation } from "react-i18next";
 
 
 
@@ -204,6 +206,9 @@ const CourseCard = ({ course, onSelect }) => {
         alt={course.title}
         className="w-full object-cover"
         layout
+        loading="lazy"
+        width={800}
+        height={180}
         initial={{ height: 0, opacity: 0 }}
         animate={
           hovered
@@ -226,6 +231,9 @@ const CourseCard = ({ course, onSelect }) => {
               src={course.image}
               alt={course.title}
               className="h-10 w-10 rounded-md object-cover"
+              loading="lazy"
+              width={40}
+              height={40}
               whileHover={{ scale: 1.3 }}
               transition={{ type: "spring", stiffness: 300, damping: 20 }}
             />
@@ -419,6 +427,9 @@ const ModalContent = ({ course, handleEnroll, featuresContainer, featureItem }) 
       src={course.image}
       alt={course.title}
       className="w-full rounded-lg object-cover mb-4 aspect-[4/3]"
+      loading="lazy"
+      width={800}
+      height={600}
     />
 
     <h1 className="text-2xl md:text-3xl font-bold mb-3 text-left">{course.title}</h1>
@@ -460,6 +471,8 @@ const ModalContent = ({ course, handleEnroll, featuresContainer, featureItem }) 
 /* ===================== Main Component (بدون تغيير) ===================== */
 export default function Courses() {
   const [selectedCourse, setSelectedCourse] = useState(null);
+  const navigate = useNavigate();
+  const { t } = useTranslation();
 
   return (
     <section className="py-20">
@@ -472,11 +485,10 @@ export default function Courses() {
         <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
           <div className="text-center mb-16 section-reveal">
             <h2 className="text-4xl md:text-5xl font-bold mb-6">
-              الدورات التدريبية
+              {t('courses.title')}
             </h2>
             <p className="text-xl text-muted-foreground max-w-3xl mx-auto">
-              دورات برمجة شاملة مصممة لجميع المستويات. من المبتدئين وحتى
-              المحترفين.
+              {t('courses.subtitle')}
             </p>
           </div>
 
@@ -485,7 +497,7 @@ export default function Courses() {
               <CourseCard
                 key={course.title}
                 course={course}
-                onSelect={() => setSelectedCourse(course)}
+                onSelect={() => navigate(`/courses/${getSlug(course.title)}`)}
               />
             ))}
           </div>
@@ -494,3 +506,22 @@ export default function Courses() {
     </section>
   );
 }
+
+const getSlug = (title: string) => {
+  switch (title) {
+    case "تطوير تطبيقات Flutter":
+      return "flutter";
+    case "تطوير الويب الواجهة الأمامية":
+      return "frontend";
+    case "برمجة الخوادم باستخدام Python":
+      return "python";
+    case "برمجة الخوادم باستخدام C#":
+      return "csharp";
+    case "أساسيات البرمجة":
+      return "basics";
+    case "البرمجة للأطفال":
+      return "kids";
+    default:
+      return "flutter";
+  }
+};

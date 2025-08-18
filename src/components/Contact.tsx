@@ -5,7 +5,7 @@ import { Input } from "@/components/ui/input";
 import { Textarea } from "@/components/ui/textarea";
 import { Badge } from "@/components/ui/badge";
 import { Label } from "@/components/ui/label";
-import { MapPin, Phone, Mail, Clock, Send, MessageCircle, Calendar, Users } from "lucide-react";
+import { Clock, Send, MessageCircle, Calendar, Users } from "lucide-react";
 import { useToast } from "@/hooks/use-toast";
 import { useTranslation } from "react-i18next";
 
@@ -32,8 +32,7 @@ const Contact = () => {
   const handleSubmit = (e) => {
     e.preventDefault();
     toast({
-      title: t('contact.form.success.title'),
-      description: t('contact.form.success.description'),
+      title: t('contact.form.success'),
     });
     setFormData({
       name: "",
@@ -47,9 +46,9 @@ const Contact = () => {
   const contactInfo = [
     {
       icon: Clock,
-      title: t('contact.workingHours.title'),
-      details: [t('contact.workingHours.schedule')],
-      action: t('contact.workingHours.action')
+      title: t('contact.info.hours.title'),
+      details: t('contact.info.hours.details', { returnObjects: true }) as string[],
+      action: t('contact.info.hours.action')
     }
   ];
 
@@ -68,9 +67,9 @@ const Contact = () => {
     },
     {
       icon: Users,
-      title: t('contact.quickActions.session.title'),
-      description: t('contact.quickActions.session.description'),
-      badge: t('contact.quickActions.session.badge')
+      title: t('contact.quickActions.visit.title'),
+      description: t('contact.quickActions.visit.description'),
+      badge: t('contact.quickActions.visit.badge')
     }
   ];
 
@@ -79,7 +78,7 @@ const Contact = () => {
       <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
         <div className="text-center mb-16 section-reveal">
           <h2 className="text-4xl md:text-5xl font-bold mb-6">
-            {t('contact.title')} <span className="bg-gradient-to-r from-primary to-accent bg-clip-text text-transparent">{t('contact.titleHighlight')}</span>
+            {t('contact.title')}
           </h2>
           <p className="text-xl text-muted-foreground max-w-3xl mx-auto">
             {t('contact.subtitle')}
@@ -105,57 +104,57 @@ const Contact = () => {
           <div className="section-reveal">
             <Card className="course-card">
               <CardHeader>
-                <CardTitle className="text-2xl">{t('contact.form.title')}</CardTitle>
-                <CardDescription>{t('contact.form.description')}</CardDescription>
+                <CardTitle className="text-2xl">{t('contact.title')}</CardTitle>
+                <CardDescription>{t('contact.subtitle')}</CardDescription>
               </CardHeader>
               <CardContent>
                 <form onSubmit={handleSubmit} className="space-y-6">
                   <div>
-                    <Label htmlFor="name">{t('contact.form.name.label')}</Label>
+                    <Label htmlFor="name">{t('contact.form.name')}</Label>
                     <Input
                       id="name"
                       name="name"
                       value={formData.name}
                       onChange={handleInputChange}
-                      placeholder={t('contact.form.name.placeholder')}
+                      placeholder={t('contact.form.name')}
                       required
                     />
                   </div>
                   
                   <div>
-                    <Label htmlFor="email">{t('contact.form.email.label')}</Label>
+                    <Label htmlFor="email">{t('contact.form.email')}</Label>
                     <Input
                       id="email"
                       name="email"
                       type="email"
                       value={formData.email}
                       onChange={handleInputChange}
-                      placeholder={t('contact.form.email.placeholder')}
+                      placeholder={t('contact.form.email')}
                       required
                     />
                   </div>
                   
                   <div>
-                    <Label htmlFor="phone">{t('contact.form.phone.label')}</Label>
+                    <Label htmlFor="phone">{t('contact.form.phone')}</Label>
                     <Input
                       id="phone"
                       name="phone"
                       type="tel"
                       value={formData.phone}
                       onChange={handleInputChange}
-                      placeholder={t('contact.form.phone.placeholder')}
+                      placeholder={t('contact.form.phone')}
                       required
                     />
                   </div>
                   
                   <div>
-                    <Label htmlFor="message">{t('contact.form.message.label')}</Label>
+                    <Label htmlFor="message">{t('contact.form.message')}</Label>
                     <Textarea
                       id="message"
                       name="message"
                       value={formData.message}
                       onChange={handleInputChange}
-                      placeholder={t('contact.form.message.placeholder')}
+                      placeholder={t('contact.form.message')}
                       rows={4}
                       required
                     />
@@ -172,9 +171,9 @@ const Contact = () => {
 
           <div className="space-y-6 section-reveal">
             <div>
-              <h3 className="text-2xl font-bold mb-6">{t('contact.info.title')}</h3>
+              <h3 className="text-2xl font-bold mb-6">{t('contact.title')}</h3>
               <p className="text-muted-foreground mb-8">
-                {t('contact.info.description')}
+                {t('contact.subtitle')}
               </p>
             </div>
 

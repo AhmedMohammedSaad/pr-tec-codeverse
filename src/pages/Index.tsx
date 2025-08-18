@@ -1,17 +1,13 @@
 import { useEffect, useState } from "react";
 import Navigation from "@/components/Navigation";
 import Hero from "@/components/Hero";
-import About from "@/components/About";
 import Courses from "@/components/Courses";
+import About from "@/components/About";
 import ChildrenSection from "@/components/ChildrenSection";
-import Testimonials from "@/components/Testimonials";
 import Contact from "@/components/Contact";
 import Footer from "@/components/Footer";
 import WhatsAppFloat from "@/components/WhatsAppFloat";
 import SEO from "@/components/SEO";
-import { GlowEffect } from "@/components/ui/glow-effect";
-import { StarsBackground } from "@/components/ui/stars-background";
-import NeuralNetworkBackground from "@/components/ui/neural-network-background";
 import { useTranslation } from "react-i18next";
 
 const Index = () => {
@@ -60,46 +56,49 @@ const Index = () => {
   }, []);
 
   return (
-    <>
+    <div className="min-h-screen bg-background relative overflow-x-hidden">
       <SEO 
         title={t('seo.pages.home.title')}
         description={t('seo.pages.home.description')}
       />
-      <div className="min-h-screen bg-background text-right relative" dir="rtl">
-      {/* خلفية الشبكة العصبية المتحركة */}
-      {isHeroVisible && (
-        <NeuralNetworkBackground 
-          nodeCount={60}
-          connectionDistance={120}
-          animationSpeed={0.3}
-          opacity={0.4}
-          color="hsl(var(--primary) / 0.6)"
-        />
-      )}
       
-      {/* تأثير ضوئي واحد مبسط */}
-      <GlowEffect 
-        color="hsl(var(--primary) / 0.08)" 
-        size="lg" 
-        intensity="low" 
-        position="top-right" 
-        className="fixed z-0" 
-      />
+      {/* Navigation */}
+      <Navigation />
       
-      {/* المحتوى */}
-      <div className="relative z-10">
-        <Navigation />
-        <Hero />
-        <About />
-        <Courses />
-        <ChildrenSection />
-        <Testimonials />
-        <Contact />
+      {/* Main Content */}
+      <div className="relative">
+        {/* Hero Section */}
+        <section id="home" className="section-reveal">
+          <Hero />
+        </section>
+        
+        {/* Courses Section */}
+        <section id="courses" className="section-reveal">
+          <Courses />
+        </section>
+        
+        {/* About Section */}
+        <section id="about" className="section-reveal">
+          <About />
+        </section>
+        
+        {/* Children Section */}
+        <section id="children" className="section-reveal">
+          <ChildrenSection />
+        </section>
+        
+        {/* Contact Section */}
+        <section id="contact" className="section-reveal">
+          <Contact />
+        </section>
+        
+        {/* Footer */}
         <Footer />
-        <WhatsAppFloat />
       </div>
-      </div>
-    </>
+      
+      {/* WhatsApp Float */}
+      <WhatsAppFloat />
+    </div>
   );
 };
 

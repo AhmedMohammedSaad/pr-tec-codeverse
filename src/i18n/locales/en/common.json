@@ -189,7 +189,7 @@
     "message": "Hello! I'm interested in learning more about PR TEC Academy courses. Can you help me?",
     "courseMessage": "Hi! I'd like to know more about the {{courseName}} course. Can you provide more details?"
   },
-  "courses": {
+  "courseDetailsInfo": {
     "flutter": {
       "title": "Flutter App Development",
       "description": "Learn how to build exceptional, high-performance apps for Android and iOS using Flutter and Dart.",
@@ -423,32 +423,143 @@
       }
     ],
     "cta": {
-      "title": "Start Your Child's Programming Journey",
-      "description": "Give your child the opportunity to learn the language of the future in a fun and interactive environment.",
-      "button": "Book a Free Trial Session"
-    }
-  },
-  "seo": {
-    "title": "PR TEC Academy - Learn Programming Online | Best Programming Courses in Iraq",
-    "description": "PR TEC Academy is Iraq's leading programming education platform. Master Flutter development, web development, backend programming, and coding for kids with expert instructors, hands-on projects, and job placement support. Join thousands of successful graduates.",
-    "keywords": "PR TEC Academy, programming courses Iraq, learn programming online, Flutter development course, web development bootcamp, backend programming, programming for kids, coding academy Baghdad, best programming academy Iraq, software development courses, mobile app development, frontend development, full stack developer course, programming training center, IT courses Iraq, computer programming classes, coding bootcamp Baghdad, تعلم البرمجة, أكاديمية تعليم البرمجة, دورات البرمجة العراق, تطوير التطبيقات, برمجة المواقع",
-    "pages": {
-      "home": {
-        "title": "PR TEC Academy - Best Programming Courses in Iraq",
-        "description": "Start your programming journey with PR TEC Academy. Expert-led courses in Flutter, Web Development, Backend, and Kids Programming. Join thousands of successful graduates."
+      "title": "Start Your Programming Journey with PR TEC",
+      "subtitle": "Join thousands who have launched their tech careers",
+      "button": "Explore Our Courses"
+    },
+    "courseDetailsInfo": {
+      "flutter": {
+        "title": "Flutter Development",
+        "description": "Build cross-platform mobile apps for Android and iOS with a single codebase.",
+        "level": "Beginner to Intermediate",
+        "duration": "4 months",
+        "students": "150+",
+        "originalPrice": 6500,
+        "discountedPrice": 6000,
+        "features": [
+          "Dart programming language fundamentals and OOP principles",
+          "Complete Flutter framework (Widgets, Layouts, Navigation, State Management)",
+          "Building responsive UIs that work perfectly on Android and iOS",
+          "Firebase integration (Authentication, Firestore, Storage, Cloud Functions)",
+          "Local data storage (SQLite, SharedPreferences, Hive)",
+          "REST API integration and handling HTTP requests with error management",
+          "Publishing apps to Google Play Store and Apple App Store",
+          "Performance optimization and debugging techniques",
+          "Using AI to enhance development speed and solve complex challenges"
+        ]
       },
-      "courses": {
-        "title": "Programming Courses - Flutter, Web & Backend | PR TEC Academy",
-        "description": "Explore our comprehensive programming courses: Flutter app development, frontend & backend web development, and programming basics for all skill levels."
+      "frontend": {
+        "title": "Frontend Web Development",
+        "description": "Create modern, responsive websites using the latest technologies.",
+        "level": "Beginner to Advanced",
+        "duration": "4 months",
+        "students": "200+",
+        "originalPrice": 5500,
+        "discountedPrice": 5000,
+        "features": [
+          "HTML5 semantic structure and accessibility best practices",
+          "CSS3, Flexbox, Grid layouts, and responsive design principles",
+          "JavaScript ES6+, DOM manipulation, and event handling",
+          "React.js fundamentals, hooks, component lifecycle, and state management",
+          "Modern development tools (Vite, npm, version control with Git)",
+          "API integration, data fetching, and handling asynchronous operations",
+          "Deployment strategies (Netlify, Vercel, GitHub Pages)",
+          "Performance optimization, SEO basics, and user experience design",
+          "Leveraging AI for faster coding, debugging, and creative solutions"
+        ]
       },
-      "about": {
-        "title": "About PR TEC Academy - Leading Programming Education in Iraq",
-        "description": "Learn about PR TEC Academy's mission to provide world-class programming education. Discover our teaching methodology, expert instructors, and success stories."
+      "python": {
+        "title": "Python Backend Development",
+        "description": "Master server-side development using Python, Django, and modern backend technologies.",
+        "level": "Intermediate to Advanced",
+        "duration": "4 months",
+        "students": "120+",
+        "originalPrice": 5500,
+        "discountedPrice": 5000,
+        "features": [
+          "Python syntax, OOP, virtual environments, and best practices",
+          "Django MVC pattern, templates, and ORM fundamentals",
+          "Django REST Framework (DRF) for building secure RESTful APIs",
+          "PostgreSQL integration, migrations, and advanced queries",
+          "Authentication & authorization (JWT/OAuth), permissions, and throttling",
+          "Task queues & scheduling with Celery and Redis",
+          "Dockerizing your backend and deploying to cloud platforms (Heroku/AWS)",
+          "Automated testing (pytest) and CI/CD pipelines",
+          "Leveraging AI for code generation, documentation, and backend automation"
+        ]
       },
-      "contact": {
-        "title": "Contact PR TEC Academy - Get Started Today",
-        "description": "Contact PR TEC Academy to start your programming journey. Book a free trial lesson, speak with our consultants, or visit our center in Baghdad."
-      }
+      "csharp": {
+        "title": "C# Backend Development",
+        "description": "Develop applications and APIs using .NET Core and Microsoft technologies.",
+        "level": "Intermediate to Advanced",
+        "duration": "4 months",
+        "students": "75+",
+        "originalPrice": 5500,
+        "discountedPrice": 5000,
+        "features": [
+          "C# fundamentals, OOP, and .NET runtime essentials",
+          "ASP.NET Core MVC and building RESTful Web APIs",
+          "Entity Framework Core, LINQ, and database migrations",
+          "SQL Server integration, schema design, and stored procedures",
+          "Authentication & authorization with Identity and JWT tokens",
+          "Dependency Injection, Clean Architecture, and SOLID principles",
+          "Docker containers, Azure deployment, and IIS hosting basics",
+          "Logging, monitoring, and debugging production issues",
+          "AI integration (Azure Cognitive Services, OpenAI APIs) to enhance your apps"
+        ]
+      },
+      "basics": {
+        "title": "Programming Fundamentals",
+        "description": "Build a strong foundation in programming using C++ and computer science concepts.",
+        "level": "Beginner",
+        "duration": "4 months",
+        "students": "300+",
+        "originalPrice": 4500,
+        "discountedPrice": 4000,
+        "features": [
+          "C++ syntax, variables, data types, and standard input/output",
+          "Control flow (conditions, loops) and error handling basics",
+          "Functions, modularization, and Object-Oriented Programming concepts",
+          "Data structures (Arrays, Linked Lists, Stacks, Queues, Trees)",
+          "Algorithms (sorting, searching, recursion) and complexity analysis",
+          "Debugging strategies, IDE usage, and code optimization tips",
+          "Introduction to databases (SQL basics and ERD diagrams)",
+          "Version control with Git/GitHub and collaborative workflows",
+          "How to leverage AI tools to practice, debug, and improve your solutions"
+        ]
+      },
+      "kids": {
+        "title": "Kids Programming",
+        "description": "An interactive programming journey for kids using Scratch and simplified Python.",
+        "level": "Ages 8 to 14",
+        "duration": "5 months",
+        "students": "100+",
+        "originalPrice": 7000,
+        "discountedPrice": 6000,
+        "features": [
+          "Scratch basics: drag-and-drop coding and game logic for kids",
+          "Designing simple games and interactive stories",
+          "Intro to Python through fun mini-projects and visual examples",
+          "Logical thinking, problem-solving, and algorithmic reasoning",
+          "Creative challenges and weekly hands-on activities",
+          "Teamwork, communication, and presenting project ideas",
+          "Safe internet practices and digital citizenship",
+          "Showcasing projects to parents and earning badges/rewards",
+          "Simple AI concepts to inspire creativity and curiosity"
+        ]
+      },
+      "currency": "EGP",
+      "enrollButton": "Enroll via WhatsApp"
+    },
+    "stats": {
+      "duration": "Duration",
+      "students": "Students",
+      "rating": "Rating"
+    },
+    "pricing": {
+      "original": "Original Price",
+      "discounted": "Discounted",
+      "currency": "EGP"
     }
   }
 }

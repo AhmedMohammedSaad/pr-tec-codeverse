@@ -40,7 +40,7 @@ const About = () => {
   ];
 
   const achievements = [
-    { number: "500+", label: t('about.achievements.graduates') },
+    { number: "200+", label: t('about.achievements.graduates') },
     { number: "95%", label: t('about.achievements.employmentRate') },
     { number: "50+", label: t('about.achievements.industryPartners') },
     { number: "4.9/5", label: t('about.achievements.studentRating') }
@@ -79,7 +79,7 @@ const About = () => {
             <div className="mt-8">
               <Button className="btn-glow">
                 {t('about.learnMoreJourney')}
-              </Button>
+              </Button> 
             </div>
           </div>
 

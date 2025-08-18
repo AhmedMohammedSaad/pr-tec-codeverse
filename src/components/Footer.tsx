@@ -31,7 +31,7 @@ const Footer = () => {
     company: [
       { name: t('footer.links.aboutUs'), href: "#about" },
       { name: t('footer.links.ourTrainers'), href: "#about" },
-      { name: t('footer.links.successStories'), href: "#testimonials" },
+      // Removed Success Stories link as the section is deleted
       { name: t('footer.links.employmentServices'), href: "#contact" },
       { name: t('footer.links.blog'), href: "#" },
     ],
@@ -51,10 +51,10 @@ const Footer = () => {
   };
 
   const socialLinks = [
-    { icon: Facebook, href: "#", label: "Facebook" },
+    { icon: Facebook, href: "https://www.facebook.com/share/1VLPuuHera/", label: "Facebook" },
     { icon: Twitter, href: "#", label: "Twitter" },
     { icon: Instagram, href: "#", label: "Instagram" },
-    { icon: Linkedin, href: "#", label: "LinkedIn" },
+    { icon: Linkedin, href: "https://www.linkedin.com/company/pr-tec-academy/", label: "LinkedIn" },
     { icon: Youtube, href: "#", label: "YouTube" },
   ];
 
@@ -71,7 +71,7 @@ const Footer = () => {
         <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 py-12">
           <div className="text-center max-w-3xl mx-auto">
             <h3 className="text-2xl font-bold mb-4">
-              {t('footer.newsletter.title')}{" "}
+              {t('footer.newsletter.title')} {" "}
               <span className="text-primary">PR TEC Academy</span>
             </h3>
             <p className="text-muted-foreground mb-6">
@@ -139,7 +139,12 @@ const Footer = () => {
                   className="rounded-full w-10 h-10 p-0 border-border hover:border-primary hover:bg-primary/10 group"
                   asChild
                 >
-                  <a href={social.href} aria-label={social.label}>
+                  <a 
+                    href={social.href} 
+                    aria-label={social.label}
+                    target={social.href !== "#" ? "_blank" : "_self"}
+                    rel={social.href !== "#" ? "noopener noreferrer" : undefined}
+                  >
                     <social.icon className="h-4 w-4 group-hover:text-primary transition-colors" />
                   </a>
                 </Button>
@@ -178,7 +183,7 @@ const Footer = () => {
 
         <div className="flex flex-col md:flex-row justify-between items-center gap-4">
           <div className="text-sm text-muted-foreground">
-            {t('footer.copyright', { year: currentYear })}
+            {t('footer.copyright', { currentYear })}
           </div>
           <div className="flex items-center gap-6 text-sm text-muted-foreground">
 

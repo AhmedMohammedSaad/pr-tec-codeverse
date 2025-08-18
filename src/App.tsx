@@ -8,6 +8,7 @@ import Index from "./pages/Index";
 import NotFound from "./pages/NotFound";
 import ExampleI18nUsage from "./components/ExampleI18nUsage";
 import Navigation from "./components/Navigation";
+import CourseDetailsPage from "./components/detale";
 
 const queryClient = new QueryClient();
 
@@ -25,6 +26,14 @@ const App = () => (
                 <Navigation />
                 <div className="pt-16">
                   <ExampleI18nUsage />
+                </div>
+              </div>
+            } />
+            <Route path="/courses/:courseId" element={
+              <div className="min-h-screen bg-background">
+                <Navigation />
+                <div className="pt-16">
+                  <CourseDetailsPage />
                 </div>
               </div>
             } />

@@ -15,12 +15,14 @@ interface LanguageSwitcherProps {
   className?: string;
   variant?: 'default' | 'ghost' | 'outline';
   size?: 'default' | 'sm' | 'lg';
+  compact?: boolean;
 }
 
 const LanguageSwitcher: React.FC<LanguageSwitcherProps> = ({
   className,
   variant = 'ghost',
   size = 'default',
+  compact = false,
 }) => {
   const { i18n, t } = useTranslation();
 
@@ -58,13 +60,20 @@ const LanguageSwitcher: React.FC<LanguageSwitcherProps> = ({
           variant={variant}
           size={size}
           className={cn(
-            'flex items-center gap-2 min-w-[120px] justify-start',
+            'flex items-center gap-2',
+            compact ? 'min-w-0 px-2 justify-center' : 'min-w-[120px] justify-start',
             className
           )}
         >
           <Globe className="h-4 w-4" />
-          <span className="hidden sm:inline">{currentLanguage.name}</span>
-          <span className="sm:hidden">{currentLanguage.code.toUpperCase()}</span>
+          {compact ? (
+            <span className="uppercase text-xs">{currentLanguage.code}</span>
+          ) : (
+            <>
+              <span className="hidden sm:inline">{currentLanguage.name}</span>
+              <span className="sm:hidden">{currentLanguage.code.toUpperCase()}</span>
+            </>
+          )}
         </Button>
       </DropdownMenuTrigger>
       <DropdownMenuContent align="end" className="min-w-[150px]">
